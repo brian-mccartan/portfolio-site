@@ -31,5 +31,30 @@ function revealOnScroll() {
     }
   });
 }
+
+// Footer reveal
+const footerFades = document.querySelectorAll(".footer-fade");
+const footerContacts = document.querySelectorAll(".footer-contact");
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 1.0;
+  reveals.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerBottom) {
+      el.classList.add("visible");
+    }
+  });
+  footerFades.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerBottom) {
+      el.classList.add("visible");
+    }
+  });
+    footerContacts.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerBottom) el.classList.add("visible");
+  });
+}
+
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);

@@ -312,6 +312,60 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .site-footer a:hover { text-decoration: underline; }
 .site-footer h6 { background: #ffffff; color: #c3c1c1; padding: 20px 0; text-align: center; font-size: 0.8rem; font-weight: 100;}
 
+.footer-fade {
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.footer-fade.visible {
+  opacity: 1;
+}
+
+/* Slide-in animation for footer contact */
+.footer-contact {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.footer-contact.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.icon-link {
+  margin: 0 12px;
+  color: #22BFFF;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.icon-link i {
+  font-size: 1.2rem; /* icon size */
+  color: #22BFFF;  /* default icon colour */
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover i {
+  color: #0044A6; /* icon hover colour */
+}
+
+.icon-link .link-text {
+  color: #242323; /* default text colour */
+  text-decoration: underline;  /* always underlined */
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover .link-text {
+  color: #0044A6; /* text hover colour */
+}
+
+
 /* Animations */
 .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
