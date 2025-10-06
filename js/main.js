@@ -96,15 +96,65 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Mobile bottom nav active state feedback
-const bottomNavItems = document.querySelectorAll('.bottom-nav .nav-item');
+// LinkedIn deep-link with reliable mobile fallback
+(function () {
+  const linkEl = document.querySelector('.bottom-nav .nav-item.linkedin');
+  if (!linkEl) return;
 
-bottomNavItems.forEach(item => {
-  item.addEventListener('click', function () {
-    bottomNavItems.forEach(i => i.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
+  linkEl.addEventListener('click', function (ev) {
+    // Only intercept on mobile devices
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const webUrl = linkEl.href || 'https://www.linkedin.com/in/brianmccartan/';
+    if (!isMobile) {
+      // Let desktop follow the normal href (no custom scheme attempt)
+      return; // do nothing; browser will follow the <a href>
+    }
+
+    ev.preventDefault(); // we'll handle navigation
+
+    const appUrl = 'linkedin://in/brianmccartan'; // try app scheme first
+    let fallbackDone = false;
+
+    // Fallback: if app doesn't open within this many ms, navigate to web URL.
+    // Use location.href (same-tab) to avoid popup blockers.
+    const FALLBACK_MS = 1000;
+    const fallbackTimer = setTimeout(() => {
+      if (!fallbackDone) {
+        fallbackDone = true;
+        window.location.href = webUrl;
+      }
+    }, FALLBACK_MS);
+
+    // If the page becomes hidden (user likely switched to the app), cancel fallback.
+    function onVisibilityChange() {
+      if (document.hidden) {
+        fallbackDone = true;
+        clearTimeout(fallbackTimer);
+        cleanup();
+      }
+    }
+
+    // If page unloads/pagehide, app likely opened — cancel fallback.
+    function onPageHide() {
+      fallbackDone = true;
+      clearTimeout(fallbackTimer);
+      cleanup();
+    }
+
+    function cleanup() {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      window.removeEventListener('pagehide', onPageHide);
+    }
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    window.addEventListener('pagehide', onPageHide);
+
+    // Try to open the LinkedIn app by changing location (this will produce console
+    // messages on desktop/devtools but is fine on real devices).
+    window.location = appUrl;
+  }, { passive: false });
+})();
+
 
 // Position the external nav toggle so it visually aligns with the .container's right edge
 function positionNavToggle() {
