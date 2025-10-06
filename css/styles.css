@@ -71,9 +71,9 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* Hamburger / X Toggle Button */
 .nav-toggle.mobile {
   position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 3000; /* above overlay & panel */
+  top: 18px;
+  right: max(4vw, 12px);  /* keeps it aligned with the container edge */
+  z-index: 3000;
   background: none;
   border: none;
   cursor: pointer;
@@ -106,6 +106,13 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 @media (max-width: 768px) {
   .nav-toggle.mobile { display: block; }
   .site-nav ul { display: none; }
+}
+
+/* extra tweak for tiny phones (like iPhone SE width <400px) */
+@media (max-width: 400px) {
+  .nav-toggle.mobile {
+    right: max(3vw, 8px);
+  }
 }
 
 /* Navigation Links Animation */
