@@ -3,11 +3,24 @@ const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("nav-links");
 const mobileNavOverlay = document.getElementById("mobileNavOverlay");
 if (navToggle && navLinks && mobileNavOverlay) {
+  let scrollPosition = 0;
+
   navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    navToggle.classList.toggle("open");
-    mobileNavOverlay.classList.toggle("open");
-    document.body.classList.toggle("no-scroll");
+    const isOpen = mobileNavOverlay.classList.toggle("open");
+    navLinks.classList.toggle("open", isOpen);
+    navToggle.classList.toggle("open", isOpen);
+
+    if (isOpen) {
+    scrollPosition = window.scrollY;
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.classList.add("no-scroll");
+    document.documentElement.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
+    document.body.style.top = "";
+    window.scrollTo(0, scrollPosition);
+  }
   });
 }
 
