@@ -58,3 +58,40 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+// Position the external nav toggle so it visually aligns with the .container's right edge
+function positionNavToggle() {
+  const btn = document.getElementById('nav-toggle');
+  // Prefer header-specific container, fall back to generic .container
+  const container = document.querySelector('.container.header-inner') || document.querySelector('.container');
+
+  if (!btn || !container) return;
+
+  const rect = container.getBoundingClientRect();
+  const containerStyle = window.getComputedStyle(container);
+  const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
+
+  // X coordinate (from left) of the container's inner right edge
+  const innerRightX = rect.left + rect.width - paddingRight;
+
+  // Compute pixels between viewport right edge and that inner right edge
+  let rightPx = Math.round(window.innerWidth - innerRightX);
+
+  // Minimum gutter so button never hugs the edge
+  const MIN_GUTTER = 8; // px
+  if (rightPx < MIN_GUTTER) rightPx = MIN_GUTTER;
+
+  // Apply as inline style (overrides CSS fallback)
+  btn.style.right = rightPx + 'px';
+
+  // Ensure button sits above overlay (defensive)
+  btn.style.zIndex = 3000;
+}
+
+// Run initially and on resize/orientation changes
+window.addEventListener('load', positionNavToggle);
+window.addEventListener('resize', positionNavToggle);
+window.addEventListener('orientationchange', positionNavToggle);
+
+// Also call after any code that might toggle classes that change layout (optional):
+// positionNavToggle();
