@@ -7,6 +7,7 @@ if (navToggle && navLinks && mobileNavOverlay) {
     navLinks.classList.toggle("open");
     navToggle.classList.toggle("open");
     mobileNavOverlay.classList.toggle("open");
+    document.body.classList.toggle("no-scroll");
   });
 }
 
