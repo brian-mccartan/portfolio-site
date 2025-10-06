@@ -59,6 +59,30 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
+// Scroll-to-top button logic
+const scrollBtn = document.getElementById("scrollToTop");
+let scrollTimeout;
+
+window.addEventListener("scroll", () => {
+  // Show button when scrolled down
+  if (window.scrollY > 200) {
+    scrollBtn.classList.add("visible");
+  } else {
+    scrollBtn.classList.remove("visible");
+  }
+
+  // Hide after inactivity
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    scrollBtn.classList.remove("visible");
+  }, 2000); // hides after 2s of no scrolling
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
 // Position the external nav toggle so it visually aligns with the .container's right edge
 function positionNavToggle() {
   const btn = document.getElementById('nav-toggle');

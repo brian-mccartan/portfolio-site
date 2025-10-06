@@ -297,6 +297,50 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; margin-top: 12px; }
 .contact-card { padding: 14px; border: 1px solid #eee; border-radius: 8px; background: #fff; }
 
+/* Scroll-to-top button */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(34, 191, 255, 0.95); /* #22BFFF with 95% opacity */
+  border: 1px solid #0044a6;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 2000;
+}
+
+/* Visible state */
+#scrollToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hover effect */
+#scrollToTop:hover {
+  background-color: rgba(34, 191, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Mobile only */
+@media (min-width: 768px) {
+  #scrollToTop {
+    display: none;
+  }
+}
+
+
 /* Animation Delays */
 #nav-links .nav-link.fade-in { animation-delay: 0s; }
 .hero-h1.fade-in { animation-delay: 0.6s; }
