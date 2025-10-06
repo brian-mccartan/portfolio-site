@@ -333,6 +333,57 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   transform: scale(1.05);
 }
 
+/* Bottom Navigation (Mobile Only) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 2100;
+  border-top: 1px solid #eee;
+}
+
+.bottom-nav .nav-item {
+  color: #666;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 8px 0;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+}
+
+.bottom-nav .nav-item:active,
+.bottom-nav .nav-item.active {
+  background-color: #22BFFF;
+  color: #fff;
+}
+
+.bottom-nav .nav-item i {
+  transition: color 0.3s ease;
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+/* Add some breathing room to bottom of body content on mobile */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px; /* height of bottom nav */
+  }
+}
+
 /* Mobile only */
 @media (min-width: 768px) {
   #scrollToTop {

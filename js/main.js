@@ -96,6 +96,15 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Mobile bottom nav active state feedback
+const bottomNavItems = document.querySelectorAll('.bottom-nav .nav-item');
+
+bottomNavItems.forEach(item => {
+  item.addEventListener('click', function () {
+    bottomNavItems.forEach(i => i.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
 
 // Position the external nav toggle so it visually aligns with the .container's right edge
 function positionNavToggle() {
