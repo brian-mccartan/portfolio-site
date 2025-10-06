@@ -1,5 +1,9 @@
 /* Reset / base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: #fff; }
 .container { width: 95%; max-width: 920px; padding-left: 8px; padding-right: 8px; margin: 0 auto; box-sizing: border-box }
 .container.header-inner { padding-left: 8px; padding-right: 8px; }
@@ -300,7 +304,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* Scroll-to-top button */
 #scrollToTop {
   position: fixed;
-  bottom: 2rem;
+  bottom: 5.5rem;
   right: 3rem;
   width: 50px;
   height: 50px;
@@ -338,9 +342,9 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: #ffffff;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -360,11 +364,11 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   border-radius: 8px;
 }
 
-.bottom-nav .nav-item:active,
-.bottom-nav .nav-item.active {
+.bottom-nav .nav-item:active {
   background-color: #22BFFF;
   color: #fff;
 }
+
 
 .bottom-nav .nav-item i {
   transition: color 0.3s ease;
