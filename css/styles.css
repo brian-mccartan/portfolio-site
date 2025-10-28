@@ -4,13 +4,30 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
-body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: #fff; }
+body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: #fff; padding-top: 80px }
 .container { width: 95%; max-width: 920px; padding-left: 8px; padding-right: 8px; margin: 0 auto; box-sizing: border-box }
 .container.header-inner { padding-left: 8px; padding-right: 8px; }
 
 /* Header */
-.site-header { padding: 16px 12px 12px 12px; position: sticky; top: 0px; z-index: 1000; transition: background 0.3s; }
-.site-header.scrolled { background: rgba(255, 255, 255, 1); box-shadow: 0 0px 0px rgba(0,0,0,0.1); }
+
+/* New wrapper that holds both header and hamburger toggle */
+.sticky-header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2500;
+  background: #fff;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.site-header { padding: 16px 12px 12px 12px; position: relative; z-index: 1000; transition: background 0.3s; }
+/* .site-header.scrolled { background: rgba(255, 255, 255, 1); box-shadow: 0 0px 0px rgba(0,0,0,0.1); } */
+.sticky-header-wrap.scrolled {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
 .logo img { height: 42px; }
 .site-nav ul { display: flex; gap: 32px; list-style: none; }
@@ -76,15 +93,15 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* Hamburger / X Toggle Button */
 .nav-toggle-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none; /* allows clicking through except the button */
+  top: 2px;
+  right: 16px;
+  width: auto;
+  pointer-events: none;
   z-index: 3000;
 }
 
 .nav-toggle.mobile {
-  position: absolute;
+  position: relative;
   top: 18px;
   right: 16px;
   background: none;
@@ -239,7 +256,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .site-footer b { font-weight: 500;}
 .site-footer a { color: #22BFFF; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
-.site-footer h6 { background: #ffffff; color: #c3c1c1; padding: 20px 0; text-align: center; font-size: 0.8rem; font-weight: 100;}
+.site-footer h6 { background: #ffffff; color: #a0a0a0; padding: 20px 0; text-align: center; font-size: 0.8rem; font-weight: 100;}
 
 .footer-fade { opacity: 0; transition: opacity 3s ease; }
 .footer-fade.visible { opacity: 1; }

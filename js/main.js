@@ -26,11 +26,11 @@ if (navToggle && navLinks && mobileNavOverlay) {
 
 // Sticky Nav
 window.addEventListener('scroll', function() {
-  const header = document.querySelector('.site-header');
+  const headerWrap = document.querySelector('.sticky-header-wrap');
   if (window.scrollY > 10) {
-    header.classList.add('scrolled');
+    headerWrap.classList.add('scrolled');
   } else {
-    header.classList.remove('scrolled');
+    headerWrap.classList.remove('scrolled');
   }
 });
 
