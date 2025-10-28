@@ -41,7 +41,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   position: fixed;
   top: 0; left: 0; width: 100vw; height: 100vh;
   background: rgba(0, 68, 166, 0.85);
-  z-index: 2000;
+  z-index: 2600;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
@@ -96,8 +96,8 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   top: 2px;
   right: 16px;
   width: auto;
-  pointer-events: none;
-  z-index: 3000;
+  /* pointer-events: none; */
+  z-index: 2500;
 }
 
 .nav-toggle.mobile {
@@ -146,6 +146,47 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
     right: max(3vw, 8px);
   }
 }
+
+/* X (close) button */
+.nav-close.mobile {
+  position: fixed;
+  top: 22px;
+  right: 40px;
+  transform: none;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  z-index: 3001; /* sits above overlay */
+}
+.nav-close.mobile span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background: #22BFFF;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-close.mobile:hover span {
+  background: #0044A6; /* darker hover blue */
+}
+
+.nav-close.mobile span:first-child {
+  transform: translateY(-50%) rotate(45deg);
+}
+.nav-close.mobile span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Show the X when overlay is open
+.mobile-nav-overlay.open ~ .nav-close.mobile {
+  display: block;
+} */
 
 /* Navigation Links Animation */
 #nav-links .nav-link.fade-in {

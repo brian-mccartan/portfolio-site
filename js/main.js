@@ -1,26 +1,35 @@
 // Mobile nav toggle
 const navToggle = document.getElementById("nav-toggle");
-const navLinks = document.getElementById("nav-links");
+const navClose = document.getElementById("nav-close");
 const mobileNavOverlay = document.getElementById("mobileNavOverlay");
-if (navToggle && navLinks && mobileNavOverlay) {
+
+if (navToggle && navClose && mobileNavOverlay) {
   let scrollPosition = 0;
 
+  // --- OPEN MENU ---
   navToggle.addEventListener("click", () => {
-    const isOpen = mobileNavOverlay.classList.toggle("open");
-    navLinks.classList.toggle("open", isOpen);
-    navToggle.classList.toggle("open", isOpen);
+    mobileNavOverlay.classList.add("open");
+    navToggle.style.display = "none";
+    navClose.style.display = "block";
 
-    if (isOpen) {
+    // Scroll lock
     scrollPosition = window.scrollY;
     document.body.style.top = `-${scrollPosition}px`;
     document.body.classList.add("no-scroll");
     document.documentElement.classList.add("no-scroll");
-  } else {
+  });
+
+  // --- CLOSE MENU ---
+  navClose.addEventListener("click", () => {
+    mobileNavOverlay.classList.remove("open");
+    navClose.style.display = "none";
+    navToggle.style.display = "block";
+
+    // Release scroll lock
     document.body.classList.remove("no-scroll");
     document.documentElement.classList.remove("no-scroll");
     document.body.style.top = "";
     window.scrollTo(0, scrollPosition);
-  }
   });
 }
 
