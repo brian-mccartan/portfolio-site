@@ -138,6 +138,10 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 @media (max-width: 768px) {
   .nav-toggle.mobile { display: block; }
   .site-nav ul { display: none; }
+  .site-header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 /* extra tweak for tiny phones (like iPhone SE width <400px) */
