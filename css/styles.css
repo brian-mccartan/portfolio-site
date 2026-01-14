@@ -329,6 +329,19 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   .project-info h2 { font-size: 1.4rem; margin-bottom: 8px; }
 }
 
+@media (max-width: 600px) {
+  .footer-contact .link-text {
+    font-size: 18px; /* adjust as needed */
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* enlarge icons if they look small next to text */
+  .footer-contact .icon-link {
+    font-size: 32px;
+  }
+}
+
 /* Animations */
 .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
