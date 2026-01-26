@@ -3,6 +3,7 @@
 html, body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behaviour: smooth;
 }
 body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: #fff; padding-top: 80px }
 .container { width: 95%; max-width: 920px; padding-left: 8px; padding-right: 8px; margin: 0 auto; box-sizing: border-box }
@@ -530,3 +531,9 @@ html.no-scroll, body.no-scroll {
 .hero-p.fade-in { animation-delay: 1.2s; }
 .hero-p.fade-in:nth-of-type(2) { animation-delay: 1.5s; }
 .hero-img.fade-in { animation-delay: 1.8s; }
+
+/* Scroll Behavior - adding margin to account for sticky header */
+
+#ux-work {
+  scroll-margin-top: 100px;
+}

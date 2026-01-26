@@ -201,3 +201,18 @@ window.addEventListener('orientationchange', positionNavToggle);
 
 // Also call after any code that might toggle classes that change layout (optional):
 // positionNavToggle();
+
+// Scroll Behaviour - transition / animation smoothness //
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const offset = 100; // To account for sticky header height
+    const targetPosition = target.offsetTop - offset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
