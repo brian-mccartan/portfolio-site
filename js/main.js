@@ -6,6 +6,19 @@ const mobileNavOverlay = document.getElementById("mobileNavOverlay");
 if (navToggle && navClose && mobileNavOverlay) {
   let scrollPosition = 0;
 
+  // Function to close the mobile menu
+  const closeMobileMenu = () => {
+    mobileNavOverlay.classList.remove("open");
+    navClose.style.display = "none";
+    navToggle.style.display = "block";
+
+    // Release scroll lock
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
+    document.body.style.top = "";
+    window.scrollTo(0, scrollPosition);
+  };
+
   // --- OPEN MENU ---
   navToggle.addEventListener("click", () => {
     mobileNavOverlay.classList.add("open");
@@ -21,15 +34,15 @@ if (navToggle && navClose && mobileNavOverlay) {
 
   // --- CLOSE MENU ---
   navClose.addEventListener("click", () => {
-    mobileNavOverlay.classList.remove("open");
-    navClose.style.display = "none";
-    navToggle.style.display = "block";
+    closeMobileMenu();
+  });
 
-    // Release scroll lock
-    document.body.classList.remove("no-scroll");
-    document.documentElement.classList.remove("no-scroll");
-    document.body.style.top = "";
-    window.scrollTo(0, scrollPosition);
+  // Close mobile nav when a link is clicked
+  const mobileNavLinks = mobileNavOverlay.querySelectorAll('a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
   });
 }
 
