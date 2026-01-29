@@ -408,7 +408,7 @@ html.no-scroll, body.no-scroll {
     padding-bottom: 40px;
   }
   .about-hero-image { flex: 0 0 280px; align-self: center; margin-top: 0; }
-  .about-hero-image img { width: 280px; height: 280px; border-radius: 8px; }
+  .about-hero-image img { width: 300px; height: 300px; border-radius: 8px; }
 }
 
 .skills h2 { margin-bottom: 8px; }
@@ -558,8 +558,9 @@ html.no-scroll, body.no-scroll {
 /* Specific override: ensure about hero image stays 280x280 on small devices
    This appears after earlier responsive rules so it wins in the cascade. */
 @media (max-width: 600px) {
-  .about-hero { flex-direction: column; align-items: center; gap: 24px; padding: 2px 0 120px 0; }
+  .about-hero { flex-direction: column; align-items: center; gap: 56px; padding: 8px 0 120px 0; }
   .about-hero .about-hero-image { flex: 0 0 280px; width: auto; max-width: none; margin-top: 0; }
   .about-hero .about-hero-image img { width: 280px; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
-  .about-hero-text p { font-size: 16px; }
+  .about-hero-text { padding-left: 8px; padding-right: 8px; }
+  .about-hero-text p { font-size: 16px;}
 }
