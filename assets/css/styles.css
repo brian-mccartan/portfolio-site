@@ -396,6 +396,17 @@ html.no-scroll, body.no-scroll {
 .about-hero-image { flex: 0 0 360px; align-self: flex-start; margin-top: 1rem; }
 .about-hero-image img { width: 360px; height: 360px; border-radius: 8px; display: block; }
 
+@media (max-width: 600px) {
+  .about-hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  .about-hero-image { flex: 0 0 280px; align-self: center; margin-top: 0; }
+  .about-hero-image img { width: 280px; height: 280px; border-radius: 8px; }
+}
+
 .skills h2 { margin-bottom: 8px; }
 .muted { color: #666; font-size: 0.95rem; margin-bottom: 18px; }
 .skill-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin-top: 10px; }
@@ -538,4 +549,13 @@ html.no-scroll, body.no-scroll {
   #scrollToTop {
     display: none;
   }
+}
+
+/* Specific override: ensure about hero image stays 280x280 on small devices
+   This appears after earlier responsive rules so it wins in the cascade. */
+@media (max-width: 600px) {
+  .about-hero { flex-direction: column; align-items: center; gap: 24px; padding: 2px 0 120px 0; }
+  .about-hero .about-hero-image { flex: 0 0 280px; width: auto; max-width: none; margin-top: 0; }
+  .about-hero .about-hero-image img { width: 280px; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
+  .about-hero-text p { font-size: 16px; }
 }
