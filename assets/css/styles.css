@@ -6,7 +6,7 @@
 html, body {
   width: 100%;
   overflow-x: hidden;
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
 body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: var(--site-background); padding-top: 80px }
 .container { width: 95%; max-width: 920px; padding-left: 8px; padding-right: 8px; margin: 0 auto; box-sizing: border-box }
@@ -351,7 +351,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* ABOUT PAGE HERO SECTION */
 /* ################################################# */
 
-.about-hero { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--site-background); }
+.about-hero { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 48px 0; background: var(--site-background); }
 .about-hero-text { flex: 1.1; }
 .about-hero-text h1 { font-size: 42px; margin-bottom: 0px; line-height: 1.25; font-weight: 100; }
 .about-hero-text p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
@@ -373,7 +373,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   width: 100vw;
   box-sizing: border-box;
   background: var(--site-background);
-  padding: 40px 0; /* adjust vertical spacing as needed */
+  padding: 48px 0;
 }
 
 .full-bleed-alt {
@@ -385,7 +385,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   width: 100vw;
   box-sizing: border-box;
   background: var(--alt-panel-background);
-  padding: 40px 0; /* adjust vertical spacing as needed */
+  padding: 48px 0;
 }
 
 .standard-panel { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--site-background); }
@@ -610,7 +610,7 @@ html.no-scroll, body.no-scroll {
 /* ### ABOUT PAGE HERO SECTION ### */
 
 @media (max-width: 880px) {
-  .about-hero { flex-direction: column; gap: 20px; padding-top: 20px; padding-bottom: 120px; background: var(--site-background); }
+  .about-hero { flex-direction: column; gap: 20px; padding-top: 20px; padding-bottom: 24px; background: var(--site-background); }
   .about-hero-image { width: 100%; max-width: 360px; margin: 0 auto; }
   .about-hero-image img { width: 100%; height: auto; }
 }
@@ -620,7 +620,7 @@ html.no-scroll, body.no-scroll {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
   }
   .about-hero-image { flex: 0 0 280px; align-self: center; margin-top: 0; }
   .about-hero-image img { width: 300px; height: 300px; border-radius: 8px; }
@@ -629,7 +629,7 @@ html.no-scroll, body.no-scroll {
 /* Specific override: ensure about hero image stays 280x280 on small devices
    This appears after earlier responsive rules so it wins in the cascade. */
 @media (max-width: 600px) {
-  .about-hero { flex-direction: column; align-items: center; gap: 56px; padding: 8px 0 120px 0; }
+  .about-hero { flex-direction: column; align-items: center; gap: 56px; padding: 8px 0 24px 0; }
   .about-hero .about-hero-image { flex: 0 0 280px; width: auto; max-width: none; margin-top: 0; }
   .about-hero .about-hero-image img { width: 280px; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
   .about-hero-text { padding-left: 8px; padding-right: 8px; }
