@@ -216,3 +216,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+// Set current year in footer copyright
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('copyright-year');
+  if (el && window.COPYRIGHT_YEAR !== undefined) el.textContent = window.COPYRIGHT_YEAR;
+});

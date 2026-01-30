@@ -1,3 +1,7 @@
+<!-- ################################################# -->
+<!-- DOCUMENT HEAD  -->
+<!-- ################################################# -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,12 @@
 </head>
 <body>
 
-<!-- Header strip and hamburger -->
+<!-- ################################################# -->
+<!-- MAIN NAV HEADER STRIP & HAMBURGER ICON ON MOBILE  -->
+<!-- ################################################# -->
+
+<!-- ### Desktop Navigation Links ### -->
+
 <div class="sticky-header-wrap">
 <header class="site-header">
   <div class="container header-inner">
@@ -32,7 +41,9 @@
   </div>
 </header>
 
-<!-- Hamburger button -->
+
+<!-- ### Mobile Hamburger Button ### -->
+
    <div class="nav-toggle-wrapper">
     <button id="nav-toggle" class="nav-toggle mobile" aria-label="Open navigation">
       <span></span><span></span><span></span>
@@ -40,17 +51,9 @@
   </div>
 </div>
 
-<!-- <div class="nav-toggle-wrapper">
-<button id="nav-toggle" class="nav-toggle mobile" aria-label="Toggle navigation">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div> -->
-</div>
 
+<!-- ### Mobile Navigation Overlay ### -->
 
-<!-- Mobile Navigation Overlay -->
 <div class="mobile-nav-overlay" id="mobileNavOverlay">
   <div class="mobile-nav-panel">
     <ul>
@@ -62,26 +65,44 @@
 </div>
 
 
-<!-- Close (X) button that sits ABOVE overlay -->
+<!-- ### X Button for closing mobile nav panel that sits ABOVE overlay ### -->
+
 <button id="nav-close" class="nav-close mobile" aria-label="Close navigation">
   <span></span><span></span>
 </button>
 
+
+<!-- ################################################# -->
+<!-- MAIN PAGE CONTENT  -->
+<!-- ################################################# -->
+
 <main class="site-main">
+
+  <!-- ### Hero Section ### -->
+
   <section class="hero container fade-in">
+  
+  <!-- H1 Text -->
   <div class="hero-h1-container">
     <h1 class="fade-in hero-h1">Hi! I'm Brian, a Product Design Manager at <a href="https://www.globalpayments.com" target="_blank" rel="noopener">Global Payments</a>. My passion is solving problems and designing clarity.</h1>
   </div>
+  <!-- Paragraph Text -->
   <div class="hero-p-container">  
     <p class="fade-in hero-p"><b>If you're interested in reading about some of my UX work, go ahead and click on any of the projects below.</b></p>
     <p class="fade-in hero-p">If you're interested in seeing examples of my Design work, please click the link in the menu above.</p> 
   </div>
+  <!-- Hero Image -->
   <div class="hero-image">
     <img src="images/Brian-Homepage-Photo-New.png" alt="Photo of Brian" class="fade-in hero-img">
   </div>
+  
 </section>
 
-  <section id="ux-work" class="projects container">
+  <!-- ### Projects Section Grid ### -->
+
+  <section id="ux-work" class="projects container"> <!-- ux-work anchor -->
+
+    <!-- Project 1 -->
     <div class="project reveal">
       <a href="work/unified-payments.html" class="project-img-link">
         <img src="images/Unified Payments.png" alt="Unified Payments Demo" class="project-img">
@@ -97,6 +118,7 @@
       </a>
     </div>
 
+    <!-- Project 2 -->
     <div class="project reveal">
       <a href="work/design-operations.html" class="project-img-link">
         <img src="images/Design Principles.png" alt="Design Principles" class="project-img">
@@ -112,6 +134,7 @@
       </a>
     </div>
 
+    <!-- Project 3 -->
     <div class="project reveal">
       <a href="work/together-academy.html" class="project-img-link">
         <img src="images/Together Academy – Home Tile.png" alt="Together Academy" class="project-img">
@@ -127,6 +150,7 @@
       </a>
     </div>
 
+    <!-- Project 4 -->
     <div class="project reveal">
       <a href="work/odysseyvc.html" class="project-img-link">
         <img src="images/Odyssey VC–Homescreen.png" alt="Odyssey VC" class="project-img">
@@ -142,6 +166,7 @@
       </a>
     </div>
 
+    <!-- Project 5 -->
     <div class="project reveal">
       <a href="work/focus-ireland.html" class="project-img-link">
         <img src="images/Focus Ireland v2.png" alt="Focus Ireland" class="project-img">
@@ -157,6 +182,7 @@
       </a>
     </div>
 
+    <!-- Project 6 -->
     <div class="project reveal">
       <a href="work/valid8me.html" class="project-img-link">
         <img src="images/Valid8Me-homescreen.png" alt="Valid8Me" class="project-img">
@@ -171,31 +197,50 @@
         </div>
       </a>
     </div>
+
   </section>
 </main>
 
+
+<!-- ################################################# -->
+<!-- SITE FOOTER  -->
+<!-- ################################################# -->
+
 <footer class="site-footer">
+
   <div class="container footer-inner">
+    <!-- Level 1 Text -->
     <h3 class="footer-fade">Feel free to connect with me on <b><a href="https://www.linkedin.com/in/brianmccartan/" target="_blank" rel="noopener">LinkedIn</a></b>!</h3>
-<p class="footer-contact">
-  <a href="mailto:br.mccartan@gmail.com" class="icon-link">
-    <i class="fa-solid fa-envelope"></i>
-    <span class="link-text">br.mccartan@gmail.com</span>
-  </a>
-  <a href="tel:+353863039799" class="icon-link">
-    <i class="fa-solid fa-mobile-screen"></i>
-    <span class="link-text">+353 86 3039799</span>
-  </a>
-</p>
-    <h6>© 2023 Brian McCartan</h6>
+    <!-- Contact Details -->
+    <p class="footer-contact">
+     <a href="mailto:br.mccartan@gmail.com" class="icon-link">
+       <i class="fa-solid fa-envelope"></i>
+       <span class="link-text">br.mccartan@gmail.com</span>
+     </a>
+     <a href="tel:+353863039799" class="icon-link">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span class="link-text">+353 86 3039799</span>
+     </a>
+    </p>
+    <!-- Copyright Line -->
+    <h6>© <span id="copyright-year"></span> Brian McCartan</h6>
   </div>
 </footer>
+
+
+<!-- ################################################# -->
+<!-- SCROLL TO TOP BUTTON ON MOBILE  -->
+<!-- ################################################# -->
 
 <button id="scrollToTop" aria-label="Scroll to top">
   <i class="fas fa-chevron-up"></i>
 </button>
 
-<!-- Mobile Bottom Navigation -->
+
+<!-- ################################################# -->
+<!-- BOTTOM NAVIGATION MENU ON MOBILE  -->
+<!-- ################################################# -->
+
 <nav class="bottom-nav">
   <a href="tel:+353863039799" class="nav-item" aria-label="Call Brian">
     <i class="fa-solid fa-phone"></i>
@@ -208,7 +253,13 @@
 </a>
 </nav>
 
-<script src="assets/js/main.js"></script>
+
+<!-- ################################################# -->
+<!-- END OF DOCUMENT  -->
+<!-- ################################################# -->
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/main.js"></script>
 
 </body>
 </html>
