@@ -246,6 +246,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* ################################################# */
+/* BULLET POINT FADE IN ANIMATION */
+/* ################################################# */
+
+// Bullet item fade-in animation on scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const bulletItems = document.querySelectorAll('.bullet-item');
+
+  const bulletObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        bulletObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  bulletItems.forEach(item => {
+    bulletObserver.observe(item);
+  });
+});
+
+
+/* ################################################# */
 /* MAKING THE COPYRIGHT YEAR VALUE AVAILABLE IN FOOTER */
 /* ################################################# */
 
