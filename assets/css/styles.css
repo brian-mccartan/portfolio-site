@@ -724,7 +724,7 @@ html.no-scroll, body.no-scroll {
 /* ### BULLET POINT GRID ### */
 
 @media (max-width: 768px) {
-  .role-points {
+  .bullet-points {
     grid-template-columns: 1fr; /* Make 2 column grid into single column on mobile */
     gap: 20px;
   }
@@ -737,6 +737,13 @@ html.no-scroll, body.no-scroll {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+/* ### PHOTO PANELS HEIGHT ADJUSTMENT ### */
+@media (max-width: 600px) {
+  .photo-panel {
+    height: 250px;
   }
 }
 
