@@ -385,7 +385,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   width: 100vw;
   box-sizing: border-box;
   background: var(--alt-panel-background);
-  padding: 48px 0;
+  padding: 48px 0px 48px 0px;
 }
 
 .standard-panel { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--site-background); }
@@ -412,6 +412,37 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; margin-top: 12px; }
 .contact-card { padding: 14px; border: 1px solid #eee; border-radius: 8px; background: #fff; }
+
+
+/* ################################################# */
+/* BULLET POINT GRID */
+/* ################################################# */
+
+.role-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 48px;
+  margin-top: 32px;
+}
+
+.role-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.role-item i {
+  color: var(--light-blue);
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.role-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 100;
+  margin: 0;
+}
 
 
 /* ################################################# */
@@ -671,5 +702,14 @@ html.no-scroll, body.no-scroll {
 @media (min-width: 768px) {
   #scrollToTop {
     display: none;
+  }
+}
+
+/* ### BULLET POINT GRID ### */
+
+@media (max-width: 768px) {
+  .role-points {
+    grid-template-columns: 1fr; /* Make 2 column grid into single column on mobile */
+    gap: 20px;
   }
 }
