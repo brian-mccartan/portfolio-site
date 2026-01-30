@@ -8,10 +8,27 @@ html, body {
   overflow-x: hidden;
   scroll-behaviour: smooth;
 }
-body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: #fff; padding-top: 80px }
+body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; background: var(--site-background); padding-top: 80px }
 .container { width: 95%; max-width: 920px; padding-left: 8px; padding-right: 8px; margin: 0 auto; box-sizing: border-box }
 .container.header-inner { padding-left: 8px; padding-right: 8px; }
 
+/* ################################################# */
+/* COLOURS */
+/* ################################################# */
+
+:root {
+  --light-blue: #22BFFF;
+  --mid-blue: #0068FF;
+  --dark-blue: #0044A6;
+  --site-background: #ffffff;
+  --alt-panel-background: #f3faff;
+}
+
+.light-blue { color: var(--light-blue); }
+.mid-blue { color: var(--mid-blue); }
+.dark-blue { color: var(--dark-blue); }
+.site-background { color: var(--site-background); }
+.alt-panel-background { background: var(--alt-panel-background); }  
 
 /* ################################################# */
 /* NAVIGATION HEADER & MENU */
@@ -25,7 +42,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   left: 0;
   width: 100%;
   z-index: 2500;
-  background: #fff;
+  background: var(--site-background);
   box-shadow: none;
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
@@ -41,8 +58,8 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .site-nav ul { display: flex; gap: 32px; list-style: none; }
 .site-nav ul li { margin-left: 0px; }
 .site-nav ul li a { text-decoration: none; color: #242323; font-weight: 600; font-size: 12px; transition: color 0.3s ease; }
-#nav-links a.active { color: #22BFFF; font-weight: 600; }
-.site-nav ul li a:hover { color: #0068FF; }
+#nav-links a.active { color: var(--light-blue); font-weight: 600; }
+.site-nav ul li a:hover { color: var(--mid-blue); }
 
 
 /* ### Mobile ### */
@@ -64,7 +81,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .mobile-nav-panel {
   position: fixed;
   top: 0; right: 0; height: 100vh; width: calc(80vw); max-width: 340px;
-  background: #fff;
+  background: var(--site-background);
   box-shadow: -2px 0 16px rgba(0,0,0,0.08);
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(.77,0,.18,1);
@@ -98,7 +115,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 }
 .mobile-nav-panel a:hover,
 .mobile-nav-panel a.active {
-  color: #22BFFF;
+  color: var(--light-blue);
 }
 
 /* Hamburger / X Toggle Button */
@@ -126,14 +143,14 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   display: block;
   width: 28px;
   height: 3px;
-  background: #22BFFF;
+  background: var(--light-blue);
   margin: 7px 0;
   border-radius: 2px;
   transition: all 0.3s;
 }
 
 .nav-toggle.mobile.open span {
-  background: #0044a6;
+  background: var(--dark-blue);
 }
 .nav-toggle.mobile.open span:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
@@ -165,13 +182,13 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   left: 0;
   width: 28px;
   height: 3px;
-  background: #22BFFF;
+  background: var(--light-blue);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .nav-close.mobile:hover span {
-  background: #0044A6;
+  background: var(--dark-blue);
 }
 
 .nav-close.mobile span:first-child {
@@ -214,7 +231,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   margin-bottom: 0;
 }
 .hero-h1-container b { font-weight: 600; }
-.hero-h1-container a { color: #0068FF; text-decoration: none; }
+.hero-h1-container a { color: var(--mid-blue); text-decoration: none; }
 
 .hero-p-container {
   grid-area: p;
@@ -224,7 +241,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .hero-p-container p { margin-bottom: 2px; }
 .hero-p-container p:last-child { margin-bottom: 0px; }
 .hero-p-container b { font-weight: 600; }
-.hero-p-container a { color: #0068FF; text-decoration: none; }
+.hero-p-container a { color: var(--mid-blue); text-decoration: none; }
 
 .hero-image {
   grid-area: image;
@@ -253,7 +270,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .project img { width: 100%; border-radius: 0px; margin-bottom: 15px; transition: transform 0.3s ease; }
 .project h2 { font-size: 1.3rem; margin-bottom: 10px; }
 .project a { text-decoration: none; color: #0070f3; font-weight: 600; transition: color 0.3s ease; }
-.project a:hover { color: #0044A6; }
+.project a:hover { color: var(--dark-blue); }
 
 .project.reveal {
   position: relative;
@@ -278,7 +295,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   left: 0;
   width: 461px;
   height: 150px;
-  background: #22BFFF;
+  background: var(--light-blue);
   border-radius: 0;
   z-index: 2;
   display: flex;
@@ -293,10 +310,10 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   transition: height 0.6s cubic-bezier(.77,0,.18,1), padding 0.6s cubic-bezier(.77,0,.18,1);
   overflow: hidden;
 }
-.project-info h2 { margin: 0px 0 8px 0; font-size: 2rem; font-weight: 100; color: #0044A6; }
+.project-info h2 { margin: 0px 0 8px 0; font-size: 2rem; font-weight: 100; color: var(--dark-blue); }
 .project-info p { margin: 0 0 8px 0; color: #FFFFFF; font-size: 0.95rem; font-weight: 200; }
 .project-info b { font-weight: 500; }
-.project-info .read-more { display: flex; align-items: center; margin-top: 8px; color: #0044A6; font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.3s; }
+.project-info .read-more { display: flex; align-items: center; margin-top: 8px; color: var(--dark-blue); font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.3s; }
 .project-info .read-more:hover { color: #062d64; }
 .read-more, .arrow { display: inline-block; margin-left: 8px; transition: opacity 0.6s cubic-bezier(.77,0,.18,1), transform 0.6s cubic-bezier(.77,0,.18,1), color 0.6s cubic-bezier(.77,0,.18,1); }
 .project.reveal:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
@@ -310,12 +327,12 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* SITE FOOTER */
 /* ################################################# */
 
-.site-footer h3 { background: #ffffff; padding-top: 20px; padding-bottom: 20px; text-align: center; font-size: 1.6rem; font-weight: 100;}
-.site-footer { background: #ffffff; padding: 40px 0; text-align: center; font-size: 1.2rem; font-weight: 200;}
+.site-footer h3 { background: var(--site-background); padding-top: 20px; padding-bottom: 20px; text-align: center; font-size: 1.6rem; font-weight: 100;}
+.site-footer { background: var(--site-background); padding: 40px 0; text-align: center; font-size: 1.2rem; font-weight: 200;}
 .site-footer b { font-weight: 500;}
-.site-footer a { color: #22BFFF; text-decoration: none; }
+.site-footer a { color: var(--light-blue); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
-.site-footer h6 { background: #ffffff; color: #a0a0a0; padding: 20px 0; text-align: center; font-size: 0.8rem; font-weight: 100;}
+.site-footer h6 { background: var(--site-background); color: #a0a0a0; padding: 20px 0; text-align: center; font-size: 0.8rem; font-weight: 100;}
 
 .footer-fade { opacity: 0; transition: opacity 3s ease; }
 .footer-fade.visible { opacity: 1; }
@@ -323,25 +340,61 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .footer-contact { opacity: 0; transform: translateX(50px); transition: opacity 1s ease, transform 1s ease; }
 .footer-contact.visible { opacity: 1; transform: translateX(0); }
 
-.icon-link { margin: 0 12px; color: #22BFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 16px; font-size: 1rem; text-decoration: none; }
-.icon-link i { font-size: 1.2rem; color: #22BFFF; transition: color 0.3s ease; }
-.icon-link:hover i { color: #0044A6; }
+.icon-link { margin: 0 12px; color: var(--light-blue); text-decoration: none; display: inline-flex; align-items: center; gap: 16px; font-size: 1rem; text-decoration: none; }
+.icon-link i { font-size: 1.2rem; color: var(--light-blue); transition: color 0.3s ease; }
+.icon-link:hover i { color: var(--dark-blue); }
 .icon-link .link-text { color: #242323; text-decoration: underline; font-weight: 400; transition: color 0.3s ease; }
-.icon-link:hover .link-text { color: #0044A6; }
+.icon-link:hover .link-text { color: var(--dark-blue); }
 
 
 /* ################################################# */
 /* ABOUT PAGE HERO SECTION */
 /* ################################################# */
 
-.about-hero { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: #fff; }
+.about-hero { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--site-background); }
 .about-hero-text { flex: 1.1; }
 .about-hero-text h1 { font-size: 42px; margin-bottom: 0px; line-height: 1.25; font-weight: 100; }
 .about-hero-text p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
 .about-hero-text .hyphen { display: block; margin: 0px 0 0px 0; font-size: 2rem; font-weight: 300; }
-.light-blue { color: #22BFFF; }
 .about-hero-image { flex: 0 0 360px; align-self: flex-start; margin-top: 1rem; }
 .about-hero-image img { width: 360px; height: 360px; border-radius: 8px; display: block; }
+
+
+/* ################################################# */
+/* STANDARD PAGE PANELS */
+/* ################################################# */
+
+.full-bleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  background: var(--site-background);
+  padding: 40px 0; /* adjust vertical spacing as needed */
+}
+
+.full-bleed-alt {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  background: var(--alt-panel-background);
+  padding: 40px 0; /* adjust vertical spacing as needed */
+}
+
+.standard-panel { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--site-background); }
+.alt-panel { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 120px 0; background: var(--alt-panel-background); }
+.panel-text { flex: 1.1; }
+.panel-text h1 { font-size: 36px; margin-bottom: 0px; line-height: 1.25; font-weight: 100; }
+.panel-text h2 { font-size: 18px; margin-bottom: 1rem; line-height: 1.5; font-weight: 100; }
+.panel-text p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
+.panel-text .hyphen { display: block; margin: 0px 0 0px 0; font-size: 2rem; font-weight: 300; }
 
 .skills h2 { margin-bottom: 8px; }
 .muted { color: #666; font-size: 0.95rem; margin-bottom: 18px; }
@@ -373,7 +426,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   height: 50px;
   border-radius: 50%;
   background-color: rgba(34, 191, 255, 0.95); /* #22BFFF with 95% opacity */
-  border: 1px solid #0044a6;
+  border: 1px solid var(--dark-blue);
   color: white;
   font-size: 20px;
   display: flex;
@@ -408,7 +461,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   bottom: 0;
   left: 0;
   width: 100vw;
-  background: #ffffff;
+  background: var(--site-background);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-around;
@@ -430,8 +483,8 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 }
 
 .bottom-nav .nav-item:active {
-  background-color: #22BFFF;
-  color: #fff;
+  background-color: var(--light-blue);
+  color: var(--site-background);
 }
 
 
@@ -557,7 +610,7 @@ html.no-scroll, body.no-scroll {
 /* ### ABOUT PAGE HERO SECTION ### */
 
 @media (max-width: 880px) {
-  .about-hero { flex-direction: column; gap: 20px; padding-top: 20px; padding-bottom: 120px; background: #fff; }
+  .about-hero { flex-direction: column; gap: 20px; padding-top: 20px; padding-bottom: 120px; background: var(--site-background); }
   .about-hero-image { width: 100%; max-width: 360px; margin: 0 auto; }
   .about-hero-image img { width: 100%; height: auto; }
 }

@@ -1,3 +1,7 @@
+/* ################################################# */
+/* MOBILE NAVIGATION */
+/* ################################################# */
+
 // Mobile nav toggle
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
@@ -33,7 +37,10 @@ if (navToggle && navClose && mobileNavOverlay) {
   });
 }
 
-// Sticky Nav
+/* ################################################# */
+/* MAKING THE HEADER STICKY TO TOP OF SCREEN */
+/* ################################################# */
+
 window.addEventListener('scroll', function() {
   const headerWrap = document.querySelector('.sticky-header-wrap');
   if (window.scrollY > 10) {
@@ -43,7 +50,10 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Scroll reveal
+/* ################################################# */
+/* MAKING ELEMENTS REVEAL AS THE SCROLL INTO VIEW */
+/* ################################################# */
+
 const reveals = document.querySelectorAll(".reveal");
 function revealOnScroll() {
   const triggerBottom = window.innerHeight * 1.0;
@@ -55,7 +65,10 @@ function revealOnScroll() {
   });
 }
 
-// Footer reveal
+/* ################################################# */
+/* HAVING THE FOOTER FADE IN AS SCROLLED INTO VIEW */
+/* ################################################# */
+
 const footerFades = document.querySelectorAll(".footer-fade");
 const footerContacts = document.querySelectorAll(".footer-contact");
 
@@ -82,7 +95,11 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-// Scroll-to-top button logic
+
+/* ################################################# */
+/* SCROLL TO TOP BUTTON LOGIC */
+/* ################################################# */
+
 const scrollBtn = document.getElementById("scrollToTop");
 let scrollTimeout;
 
@@ -105,7 +122,11 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// LinkedIn deep-link with reliable mobile fallback
+
+/* ################################################# */
+/* DEEP LINK TO OPEN LINKEDIN APP ON MOBILE */
+/* ################################################# */
+
 (function () {
   const linkEl = document.querySelector('.bottom-nav .nav-item.linkedin');
   if (!linkEl) return;
@@ -165,7 +186,10 @@ scrollBtn.addEventListener("click", () => {
 })();
 
 
-// Position the external nav toggle so it visually aligns with the .container's right edge
+/* ################################################# */
+/* NAVIGATION TOGGLE ALIGNMENT */
+/* ################################################# */
+
 function positionNavToggle() {
   const btn = document.getElementById('nav-toggle');
   // Prefer header-specific container, fall back to generic .container
@@ -202,7 +226,10 @@ window.addEventListener('orientationchange', positionNavToggle);
 // Also call after any code that might toggle classes that change layout (optional):
 // positionNavToggle();
 
-// Scroll Behaviour - transition / animation smoothness //
+
+/* ################################################# */
+/* SCROLL BEHAVIOURS */
+/* ################################################# */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -217,7 +244,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Set current year in footer copyright
+
+/* ################################################# */
+/* MAKING THE COPYRIGHT YEAR VALUE AVAILABLE IN FOOTER */
+/* ################################################# */
+
 document.addEventListener('DOMContentLoaded', () => {
   const el = document.getElementById('copyright-year');
   if (el && window.COPYRIGHT_YEAR !== undefined) el.textContent = window.COPYRIGHT_YEAR;
