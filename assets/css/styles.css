@@ -395,6 +395,32 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .panel-text h2 { font-size: 18px; margin-bottom: 0.5rem; line-height: 1.5; font-weight: 100; }
 .panel-text p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
 .panel-text .hyphen { display: block; margin: 0px 0 0px 0; font-size: 2rem; font-weight: 300; }
+.panel-text-2col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 68px; align-items: start; padding: 56px 0 120px 0; }
+.panel-text-2col h1 { font-size: 36px; margin-bottom: 0px; line-height: 1.25; font-weight: 100; }
+.panel-text-2col h2 { font-size: 18px; margin-bottom: 0.5rem; line-height: 1.5; font-weight: 100; }
+.panel-text-2col p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
+.panel-text-2col .hyphen { display: block; margin: 0px 0 0px 0; font-size: 2rem; font-weight: 300; }
+
+
+/* ################################################# */
+/* REUSABLE 2-COLUMN PANEL BLOCK */
+/* ################################################# */
+
+.panel-col-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-col-right img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* spacing for embedded media inside 2-col panels */
+.spotify-embed {
+  margin-top: 24px;
+}
 
 
 /* ################################################# */
@@ -684,7 +710,7 @@ html.no-scroll, body.no-scroll {
   .about-hero .about-hero-image { flex: 0 0 280px; width: auto; max-width: none; margin-top: 0; }
   .about-hero .about-hero-image img { width: 280px; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
   .about-hero-text { padding-left: 8px; padding-right: 8px; }
-  .about-hero-text h1 { font-size: 46px;
+  .about-hero-text h1 { font-size: 46px; }
 }
 
 
@@ -766,3 +792,11 @@ html.no-scroll, body.no-scroll {
   }
 }
 
+/* ### MAKE 2 COLUMN PANELS STACK ON MOBILE ### */
+@media (max-width: 768px) {
+  .panel-text-2col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 64px;
+  }
+}
