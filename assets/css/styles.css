@@ -354,7 +354,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .about-hero { display: flex; gap: 68px; align-items: flex-start; padding: 56px 0 48px 0; background: var(--site-background); }
 .about-hero-text { flex: 1.1; }
 .about-hero-text h1 { font-size: 42px; margin-bottom: 0px; line-height: 1.25; font-weight: 100; }
-.about-hero-text p { font-size: 15px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
+.about-hero-text p { font-size: 16px; margin-bottom: 1rem; line-height: 1.7em; font-weight: 100; }
 .about-hero-text .hyphen { display: block; margin: 0px 0 0px 0; font-size: 2rem; font-weight: 300; }
 .about-hero-image { flex: 0 0 360px; align-self: flex-start; margin-top: 1rem; }
 .about-hero-image img { width: 360px; height: 360px; border-radius: 8px; display: block; }
@@ -581,7 +581,7 @@ html.no-scroll, body.no-scroll {
 /* RESPONSIVE ADJUSTMENTS FOR MOBILE */
 /* ################################################# */
 
-/* ### HAMBURGER / X TOGGLE BUTTON ### */
+/* ### HEADER & HAMBURGER / X TOGGLE BUTTON ### */
 
 @media (max-width: 768px) {
   .nav-toggle.mobile { display: block; }
@@ -626,7 +626,7 @@ html.no-scroll, body.no-scroll {
 
 @media (max-width: 768px) {
   .header-inner { position: relative; }
-  .hero { padding-top: 36px; padding-bottom: 36px; flex-direction: column; }
+  .hero { padding-top: 16px; padding-bottom: 36px; flex-direction: column; }
   .hero-image { width: 100%; padding: 0 8px; box-sizing: border-box; }
   .hero-image img { width: 100%; max-width: 360px; height: auto; display: block; margin: 0 auto; }
 }
@@ -653,6 +653,10 @@ html.no-scroll, body.no-scroll {
   .project-info h2 { font-size: 1.4rem; margin-bottom: 8px; }
 }
 
+/* Reduce the padding beneath the projects grid on mobile */
+@media (max-width: 600px) {
+.projects { margin-bottom: 8px; }
+}
 
 /* ### ABOUT PAGE HERO SECTION ### */
 
@@ -680,10 +684,17 @@ html.no-scroll, body.no-scroll {
   .about-hero .about-hero-image { flex: 0 0 280px; width: auto; max-width: none; margin-top: 0; }
   .about-hero .about-hero-image img { width: 280px; height: 280px; object-fit: cover; border-radius: 8px; display: block; }
   .about-hero-text { padding-left: 8px; padding-right: 8px; }
-  .about-hero-text p { font-size: 16px;}
+  .about-hero-text h1 { font-size: 46px;
 }
 
 
+/* ### HOMEPAGE HERO SECTION ### */
+
+@media (max-width: 600px) {
+  .panel-text h2 { 
+    font-size: 18px;
+    line-height: 1.6 }
+  }
 /* ### SITE FOOTER ### */
 
 @media (max-width: 600px) {
@@ -698,11 +709,16 @@ html.no-scroll, body.no-scroll {
   }
 }
 
-/* Hide on desktop */
-@media (min-width: 769px) {
+/* Hide contacts panel on desktop */
+@media (min-width: 768px) {
   .bottom-nav {
     display: none;
   }
+}
+
+/* Reduce the padding above the site footer on mobile */
+@media (max-width: 600px) {
+.site-footer { padding: 8px 0;}
 }
 
 /* Add some breathing room to bottom of body content on mobile */
@@ -727,6 +743,9 @@ html.no-scroll, body.no-scroll {
   .bullet-points {
     grid-template-columns: 1fr; /* Make 2 column grid into single column on mobile */
     gap: 20px;
+  }
+  .bullet-item p {
+    font-size: 16px; /* display text at slightly larger size on small screens */
   }
 }
 
