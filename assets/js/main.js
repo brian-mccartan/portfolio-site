@@ -278,3 +278,171 @@ document.addEventListener('DOMContentLoaded', () => {
   const el = document.getElementById('copyright-year');
   if (el && window.COPYRIGHT_YEAR !== undefined) el.textContent = window.COPYRIGHT_YEAR;
 });
+
+
+/* ################################################# */
+/* YOUTUBE VIDEO PLAYER SWITCHER */
+/* ################################################# */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mainVideo = document.getElementById('mainVideo');
+  const thumbnails = document.querySelectorAll('.thumbnail-item');
+  const thumbnailsContainer = document.querySelector('.video-thumbnails');
+  const dots = document.querySelectorAll('.carousel-dots .dot');
+  
+  if (!mainVideo || thumbnails.length === 0) return;
+  
+  const isMobile = () => window.innerWidth <= 768;
+  
+  // Helper function to stop all playing videos on mobile
+  function stopAllVideos() {
+    thumbnails.forEach(thumb => {
+      if (thumb.classList.contains('playing')) {
+        const iframe = thumb.querySelector('iframe');
+        if (iframe) {
+          // Remove the iframe to stop playback
+          iframe.remove();
+        }
+        
+        // Show the thumbnail image and play overlay again
+        const img = thumb.querySelector('img');
+        const overlay = thumb.querySelector('.play-overlay');
+        if (img) img.style.display = 'block';
+        if (overlay) overlay.style.display = 'flex';
+        
+        // Reset thumbnail styling
+        thumb.style.position = '';
+        thumb.style.paddingBottom = '';
+        thumb.style.height = '';
+        
+        thumb.classList.remove('playing');
+      }
+    });
+  }
+  
+  // Desktop/Tablet: Click on thumbnails to update main player
+  // Mobile: Click on thumbnails to replace with video player
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function(e) {
+      const videoId = this.getAttribute('data-video-id');
+      const index = parseInt(this.getAttribute('data-index'));
+      
+      if (isMobile()) {
+        // Mobile: Replace thumbnail with embedded video player
+        if (!this.classList.contains('playing')) {
+          // Stop any currently playing videos first
+          stopAllVideos();
+          
+          // Create iframe
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          iframe.width = '100%';
+          iframe.height = '100%';
+          iframe.frameBorder = '0';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          iframe.style.position = 'absolute';
+          iframe.style.top = '0';
+          iframe.style.left = '0';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.borderRadius = '8px';
+          
+          // Hide the thumbnail image and play overlay
+          const img = this.querySelector('img');
+          const overlay = this.querySelector('.play-overlay');
+          if (img) img.style.display = 'none';
+          if (overlay) overlay.style.display = 'none';
+          
+          // Make thumbnail container relative for iframe positioning
+          this.style.position = 'relative';
+          this.style.paddingBottom = '56.25%'; // 16:9 aspect ratio
+          this.style.height = '0';
+          
+          // Add iframe to thumbnail
+          this.appendChild(iframe);
+          this.classList.add('playing');
+        }
+      } else {
+        // Desktop: Update main video player
+        mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
+        
+        // Remove active class from all thumbnails
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+        
+        // Add active class to clicked thumbnail
+        this.classList.add('active');
+        
+        // Update dots
+        updateDots(index);
+      }
+    });
+  });
+  
+  // Mobile: Detect scroll position and update dots + stop videos
+  if (thumbnailsContainer) {
+    let scrollTimeout;
+    let lastActiveIndex = 0;
+    
+    thumbnailsContainer.addEventListener('scroll', function() {
+      clearTimeout(scrollTimeout);
+      
+      scrollTimeout = setTimeout(() => {
+        if (!isMobile()) return; // Only run on mobile
+        
+        const scrollLeft = thumbnailsContainer.scrollLeft;
+        const itemWidth = thumbnailsContainer.scrollWidth / thumbnails.length;
+        const currentIndex = Math.round(scrollLeft / itemWidth);
+        
+        // If the index changed (user swiped to a different video)
+        if (currentIndex !== lastActiveIndex) {
+          // Stop all playing videos
+          stopAllVideos();
+          lastActiveIndex = currentIndex;
+        }
+        
+        // Update active thumbnail
+        thumbnails.forEach((thumb, index) => {
+          if (index === currentIndex) {
+            thumb.classList.add('active');
+          } else {
+            thumb.classList.remove('active');
+          }
+        });
+        
+        // Update dots
+        updateDots(currentIndex);
+      }, 150);
+    });
+  }
+  
+  // Click on dots to navigate
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      if (!isMobile()) return; // Only work on mobile
+      
+      const index = parseInt(this.getAttribute('data-index'));
+      const itemWidth = thumbnailsContainer.scrollWidth / thumbnails.length;
+      
+      // Stop all playing videos before navigating
+      stopAllVideos();
+      
+      // Scroll to the corresponding thumbnail
+      thumbnailsContainer.scrollTo({
+        left: itemWidth * index,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Helper function to update dots
+  function updateDots(activeIndex) {
+    dots.forEach((dot, index) => {
+      if (index === activeIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+});
