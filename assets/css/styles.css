@@ -655,6 +655,150 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 
 
 /* ################################################# */
+/* DESIGN WORK PAGE */
+/* ################################################# */
+
+/* Hero Section for Design Work */
+.design-work-hero {
+  padding-top: 56px;
+  padding-bottom: 62px;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+}
+
+.design-work-hero .hero-h1-container,
+.design-work-hero .hero-p-container {
+  max-width: 100%;
+}
+
+/* Design Work Grid */
+.design-grid {
+  padding-bottom: 60px;
+}
+
+.design-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.design-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Row layouts */
+.row-50-50 {
+  /* 50/50 split */
+}
+
+.row-50-50 .design-item {
+  flex: 1;
+}
+
+.row-60-40 .design-item.item-60 {
+  flex: 0 0 calc(60% - 4px);
+}
+
+.row-60-40 .design-item.item-40 {
+  flex: 0 0 calc(40% - 4px);
+}
+
+.row-33-33-33 .design-item {
+  flex: 1;
+  aspect-ratio: 1/1;
+}
+
+/* Design Item */
+.design-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  aspect-ratio: 16/9;
+}
+
+.design-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+/* Overlay */
+.design-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 68, 166, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+  pointer-events: none;
+}
+
+.overlay-content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.77, 0, 0.18, 1), 
+              transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+  padding: 20px;
+}
+
+/* Hover Effects */
+.design-item:hover img {
+  transform: scale(1.05);
+}
+
+.design-item:hover .design-overlay {
+  background: rgba(0, 68, 166, 0.9);
+}
+
+.design-item:hover .overlay-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay Text Styling */
+.project-title {
+  color: var(--light-blue);
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.click-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.overlay-content .hyphen {
+  display: block;
+  color: white;
+  font-size: 24px;
+  margin: 8px 0;
+  font-weight: 300;
+}
+
+.project-details {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 8px 0 0 0;
+  line-height: 1.4;
+}
+
+/* ################################################# */
 /* ANIMATIONS & BEHAVIOURS */
 /* ################################################# */
 
@@ -1032,5 +1176,84 @@ html.no-scroll, body.no-scroll {
   .full-bleed-alt .panel-text-2col {
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+
+/* ################################################# */
+/* DESIGN WORK GRID MOBILE RESPONSIVE */
+/* ################################################# */
+
+@media (max-width: 768px) {
+  .design-work-hero {
+    padding-top: 20px;
+    padding-bottom: 32px;
+    padding-left:16px;
+    padding-right:16px;
+  }
+  
+  .design-grid {
+    padding-bottom: 32px;
+    
+  }
+  
+  /* Stack all rows vertically on mobile */
+  .design-row {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  /* All items full width on mobile */
+  .row-60-40 .design-item.item-60,
+  .row-60-40 .design-item.item-40,
+  .row-50-50 .design-item,
+  .row-33-33-33 .design-item {
+    flex: 1 1 100%;
+  }
+  
+  /* Adjust text sizes for mobile */
+  .project-title {
+    font-size: 24px;
+  }
+  
+  .click-text,
+  .project-details {
+    font-size: 14px;
+  }
+  
+  .overlay-content .hyphen {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .design-work-hero {
+    padding-top: 16px;
+    padding-bottom: 48px;
+    padding-left:8px;
+    padding-right:8px;
+  }
+
+  /* 50/50 rows: Keep 16:9 on mobile */
+  .row-50-50 .design-item {
+    aspect-ratio: 16/9;
+  }
+
+  /* 60/40 rows: 4:3 on mobile */
+  .row-60-40 .design-item {
+    aspect-ratio: 4/3;
+  }
+
+  .row-33-33-33 .design-item {
+    aspect-ratio: 4/3;
+  }
+  
+  .project-title {
+    font-size: 20px;
+  }
+
+  .design-grid {
+    padding-bottom: 16px;
+    
   }
 }
