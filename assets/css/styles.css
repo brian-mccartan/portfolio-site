@@ -22,6 +22,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
   --dark-blue: #0044A6;
   --site-background: #ffffff;
   --alt-panel-background: #f3faff;
+  --standard-text-color: #242323;
 }
 
 .light-blue { color: var(--light-blue); }
@@ -29,6 +30,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .dark-blue { color: var(--dark-blue); }
 .site-background { color: var(--site-background); }
 .alt-panel-background { background: var(--alt-panel-background); }  
+.standard-text-color { color: var(--standard-text-color); }
 
 /* ################################################# */
 /* NAVIGATION HEADER & MENU */

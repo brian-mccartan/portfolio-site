@@ -320,6 +320,23 @@ vimeoIframes.forEach(iframe => vimeoObserver.observe(iframe));
 
   
   /* ================================================== */
+  /* GALLERY ROW SCROLL REVEAL */
+  /* ================================================== */
+
+  const galleryRows = document.querySelectorAll('.gallery-row');
+
+  const rowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        rowObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  galleryRows.forEach(row => rowObserver.observe(row));
+
+  /* ================================================== */
   /* PROJECT NAVIGATION */
   /* ================================================== */
   
@@ -503,5 +520,3 @@ if (!document.querySelector('.sr-only')) {
   `;
   document.head.appendChild(style);
 }
-
-
