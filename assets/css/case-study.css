@@ -3,6 +3,33 @@
 /* ################################################# */
 
 /* ================================================== */
+/* SKIP TO CONTENT (ACCESSIBILITY) */
+/* ================================================== */
+
+.skip-to-content {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120px);
+  background: #ffffff;
+  color: var(--mid-blue);
+  border: 1.5px solid var(--mid-blue);
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  z-index: 99999;
+  transition: transform 0.3s ease;
+}
+
+.skip-to-content:focus {
+  transform: translateX(-50%) translateY(0);
+  outline: none;
+}
+
+/* ================================================== */
 /* HERO AREA */
 /* ================================================== */
 
@@ -464,7 +491,7 @@
   /* Two column text */
   .case-study-intro {
     margin-bottom: 48px;
-    padding: 0 8px;
+    padding: 0 20px;
   }
   
   .case-study-text-2col {
@@ -509,6 +536,10 @@
 
   .gallery-row.row-33-33-33 .gallery-item {
     aspect-ratio: 1/1; /* Keep 1:1 ratio on mobile too */
+  }
+
+  .gallery-item.item-portrait {
+    aspect-ratio: unset; /* Allow portrait items to retain natural height */
   }
 
   .gallery-item .play-overlay {
