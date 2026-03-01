@@ -441,6 +441,10 @@
 
 @media (max-width: 768px) {
   /* Hero */
+  .case-study-hero {
+    margin-bottom: 48px;
+  }
+
   .case-study-hero-media {
     height: 0;
     padding-bottom: 100%; /* 1:1 aspect ratio */
@@ -573,7 +577,6 @@
     font-size: 1.2rem;
   }
   
-  .case-study-text-2col .col-right p,
   .case-study-text-2col .col-left p {
     font-size: 0.95rem;
   }
