@@ -198,6 +198,12 @@
   flex: 0 0 calc(45% - 7.2px);
 }
 
+/* Row type: Full width single image */
+.gallery-row.row-full .gallery-item {
+  flex: 1 1 100%;
+  aspect-ratio: 21/9; /* Matches the height feel of other rows */
+}
+
 /* Gallery items */
 .gallery-item {
   position: relative;
@@ -402,6 +408,12 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: #222;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-nav-text:hover {
+  color: var(--light-blue);
 }
 
 .nav-arrow {
@@ -526,7 +538,8 @@
   .gallery-row.row-70-30 .gallery-item.item-70,
   .gallery-row.row-70-30 .gallery-item.item-30,
   .gallery-row.row-55-45 .gallery-item.item-55,
-  .gallery-row.row-55-45 .gallery-item.item-45 {
+  .gallery-row.row-55-45 .gallery-item.item-45,
+  .gallery-row.row-full .gallery-item {
     flex: 1 1 100%;
   }
 
@@ -537,6 +550,15 @@
   .gallery-row.row-33-33-33 .gallery-item {
     aspect-ratio: 1/1; /* Keep 1:1 ratio on mobile too */
   }
+
+  .gallery-row.row-full .gallery-item {
+  aspect-ratio: auto; /* Restores natural image proportions on mobile */
+}
+
+.gallery-row.row-full .gallery-item img {
+  height: auto;
+  object-fit: contain; /* or 'cover' if you want it to fill */
+}
 
   .gallery-item.item-portrait {
     aspect-ratio: unset; /* Allow portrait items to retain natural height */
