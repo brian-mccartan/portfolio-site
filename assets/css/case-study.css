@@ -203,7 +203,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  background: #000;
+  background: transparent;
   border-radius: 4px;
   transition: transform 0.3s ease;
 }
