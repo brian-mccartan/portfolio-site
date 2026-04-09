@@ -800,47 +800,26 @@
 
 
 /* ================================================== */
-/* UX CASE STUDY: HERO IMAGE                         */
-/* ================================================== */
-
-.ux-cs-hero {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  margin-bottom: 64px;
-  background: #000;
-}
-
-.ux-cs-hero img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-
-/* ================================================== */
 /* UX CASE STUDY: TITLE BLOCK                        */
 /* ================================================== */
 
 .ux-cs-title-block {
   margin-bottom: 72px;
-  padding-top: 8px;
+  padding-top: 0px;
 }
 
 .ux-cs-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: var(--light-blue);
+  color: var(--dark-grey);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .ux-cs-h1 {
-  font-size: 3.2rem;
-  font-weight: 100;
+  font-size: 3.75rem;
+  font-weight: 500;
   line-height: 1.2;
   color: var(--dark-blue);
   margin: 0;
@@ -1182,14 +1161,6 @@
 
 @media (max-width: 768px) {
 
-  .ux-cs-hero {
-    margin-bottom: 40px;
-  }
-
-  .ux-cs-hero img {
-    height: auto;
-    aspect-ratio: 5/3;
-  }
 
   .ux-cs-title-block {
     margin-bottom: 48px;
@@ -1283,10 +1254,6 @@
 /* ================================================== */
 
 @media print {
-  .ux-cs-hero img {
-    height: auto;
-    max-height: 300px;
-  }
 
   .ux-cs-sidebar-heading {
     position: static;
