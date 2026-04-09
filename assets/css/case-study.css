@@ -804,7 +804,7 @@
 /* ================================================== */
 
 .ux-cs-title-block {
-  margin-bottom: 72px;
+  margin-bottom: 24px;
   padding-top: 0px;
 }
 
@@ -826,12 +826,46 @@
 }
 
 
+/* UX Case Study: Overview body text */
+.case-study-overview-text {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: var(--standard-text-color);
+  margin-bottom: 20px;
+}
+
+.case-study-overview-text:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* UX Case Study: Overview 3 Column Section */
+.ux-cs-meta-item-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  margin-bottom: 12px; /* control spacing between title and body */
+}
+
+.ux-cs-meta-item-body {
+  font-size: 16px;
+  line-height: 1.7em;
+  font-weight: 400;
+  color: var(--dark-grey);
+  margin-bottom: 0;
+}
+
+
 /* ================================================== */
 /* UX CASE STUDY: SECTION WRAPPER                    */
 /* ================================================== */
 
 .ux-cs-section {
-  padding: 56px 0;
+  padding: 56px 0 80px 0;
 }
 
 /* Alt (tinted) sections — full-bleed background */
@@ -937,9 +971,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px 32px;
-  margin-top: 40px;
+  margin-top: 16px;
   padding-top: 32px;
-  border-top: 1px solid rgba(34, 191, 255, 0.25);
 }
 
 .ux-cs-meta-label {
@@ -950,14 +983,6 @@
   text-transform: uppercase;
   color: var(--light-blue);
   margin-bottom: 8px;
-}
-
-.ux-cs-meta-item p {
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  margin-bottom: 0 !important;
-  font-weight: 400 !important;
-  color: var(--standard-text-color);
 }
 
 
@@ -1190,8 +1215,8 @@
   .ux-cs-meta-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-top: 28px;
-    padding-top: 24px;
+    margin-top: 16px;
+    padding-top: 16px;
   }
 
   .ux-cs-full-image {
