@@ -1398,10 +1398,25 @@
   }
 
   .ux-cs-h1 {
-    font-size: 2.2rem;
+    font-size: 3.75rem;
   }
 
   .ux-cs-section {
+    padding: 40px 0;
+  }
+
+  .ux-cs-section-intro--blue,
+  .ux-cs-section-body--blue,
+  .ux-cs-section-end--blue,
+  .ux-cs-section-intro--white,
+  .ux-cs-section-body--white,
+  .ux-cs-section-end--white {
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
     padding: 40px 0;
   }
 
@@ -1488,7 +1503,7 @@
 @media (max-width: 480px) {
 
   .ux-cs-h1 {
-    font-size: 1.8rem;
+    font-size: 3.75rem;
   }
 
   .ux-cs-h2 {
