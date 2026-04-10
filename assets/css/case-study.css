@@ -1398,7 +1398,7 @@
   }
 
   .ux-cs-h1 {
-    font-size: 3.75rem;
+    font-size: 3rem;
   }
 
   .ux-cs-section {
@@ -1503,7 +1503,7 @@
 @media (max-width: 480px) {
 
   .ux-cs-h1 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 
   .ux-cs-h2 {
