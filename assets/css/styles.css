@@ -17,7 +17,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* ################################################# */
 
 :root {
-  --light-blue: #22BFFF;
+  --light-blue: #22bfff;
   --light-blue-background: #ddeffd;
   --mid-blue: #0068FF;
   --dark-blue: #0044A6;
