@@ -1547,6 +1547,44 @@
   outline-offset: 4px;
 }
 
+/* ================================================== */
+/* PROCESS INNOVATION IMAGES                         */
+/* ================================================== */
+
+.process-innovation-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;           /* Control spacing between images */
+  margin-top: 8px;    /* Control spacing above */
+  margin-bottom: 40px; /* Control spacing below */
+  width: 100%;
+}
+
+.process-innovation-images img {
+  height: 250px;        /* Fixed height - adjust this value as needed */
+  width: auto;          /* Width scales proportionally */
+  display: block;
+  object-fit: contain;  /* Ensures image fits without cropping */
+  border-radius: 4px;
+}
+
+/* Medium variant - larger height for single image display */
+.process-innovation-images--medium img {
+  height: 400px;        /* Larger height for single image display */
+}
+
+/* Hide second image on mobile */
+@media (max-width: 768px) {
+  .process-innovation-images {
+    gap: 0;
+  }
+
+  .animated-image-2 {
+    display: none;
+  }
+}
+
 
 /* ================================================== */
 /* UX CASE STUDY: PRINT STYLES                       */
