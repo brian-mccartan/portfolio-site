@@ -1405,7 +1405,7 @@
 
 
   .ux-cs-title-block {
-    margin-bottom: 48px;
+    margin-bottom: 8px;
   }
 
   .ux-cs-h1 {
@@ -1414,6 +1414,14 @@
 
   .ux-cs-section {
     padding: 40px 0;
+  }
+
+  .ux-cs-section-title {
+    font-size: 28px;
+  }
+
+  .ux-cs-h3-subsection {
+    font-size: 22px;
   }
 
   .ux-cs-section-intro--blue,
@@ -1451,18 +1459,19 @@
     padding-top: 16px;
   }
 
-  .ux-cs-numbered-list-item {
+  .ux-cs-numbered-list-item,
+  .ux-cs-numbered-list-item--blue {
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 16px;
   }
 
   .ux-cs-list-number {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .ux-cs-list-text {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .ux-cs-full-image {
@@ -1473,6 +1482,11 @@
   .ux-cs-full-image--white {
     display: block !important;
     padding: 24px 0 !important;
+  }
+
+  .ux-cs-full-image--blue img,
+  .ux-cs-full-image--white img {
+    display: none !important;
   }
 
   .ux-cs-full-image--blue img,
@@ -1580,8 +1594,12 @@
     gap: 0;
   }
 
-  .animated-image-2 {
-    display: none;
+  .process-innovation-images .animated-image-2 {
+    display: none !important;
+  }
+
+  .process-innovation-images--medium img {
+    height: 300px;
   }
 }
 
