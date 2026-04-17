@@ -1421,14 +1421,32 @@
   }
 
   .ux-cs-h3-subsection {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .ux-cs-section-intro--blue,
+  .ux-cs-section-intro--white {
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    padding: 40px 0 4px 0;
+  }
+
   .ux-cs-section-body--blue,
+  .ux-cs-section-body--white {
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    padding: 0 0 4px 0;
+  }
+
   .ux-cs-section-end--blue,
-  .ux-cs-section-intro--white,
-  .ux-cs-section-body--white,
   .ux-cs-section-end--white {
     position: static;
     left: auto;
@@ -1467,11 +1485,11 @@
   }
 
   .ux-cs-list-number {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .ux-cs-list-text {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .ux-cs-full-image {
@@ -1528,7 +1546,7 @@
 @media (max-width: 480px) {
 
   .ux-cs-h1 {
-    font-size: 2.5rem;
+    font-size: 2.625rem;
   }
 
   .ux-cs-h2 {
