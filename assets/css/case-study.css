@@ -1064,6 +1064,16 @@
   margin-bottom: 0;
 }
 
+/* UX Case Study: Section Image Title */
+.ux-cs-section-image-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
 .ux-cs-inline-link {
   color: var(--mid-blue);
   text-decoration: none;
