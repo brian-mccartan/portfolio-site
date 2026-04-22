@@ -444,6 +444,122 @@ vimeoIframes.forEach(iframe => vimeoObserver.observe(iframe));
     });
   }
   
+  /* ================================================== */
+  /* WEBSITE GALLERY (Together Academy) */
+  /* ================================================== */
+  
+  const galleryContainer = document.querySelector('.website-gallery-container');
+  const galleryImages = document.querySelectorAll('.website-gallery-image');
+  const galleryPrevBtn = document.querySelector('.website-gallery-prev');
+  const galleryNextBtn = document.querySelector('.website-gallery-next');
+  
+  let currentGalleryIndex = 0;
+  let isAnimating = false;
+  
+  if (galleryContainer && galleryImages.length > 0) {
+    
+    // Update gallery display with scroll animation
+    function updateGalleryDisplay(direction = null) {
+      if (isAnimating) return;
+      isAnimating = true;
+      
+      galleryImages.forEach((img, index) => {
+        if (index === currentGalleryIndex) {
+          // Remove any leaving classes
+          img.classList.remove('leaving-left', 'leaving-right', 'entering-from-left', 'entering-from-right');
+          // Add active class for new image
+          img.classList.add('active');
+        } else if (img.classList.contains('active')) {
+          // Animate out the currently active image
+          img.classList.remove('active');
+          if (direction === 'next') {
+            img.classList.add('leaving-left');
+          } else if (direction === 'prev') {
+            img.classList.add('leaving-right');
+          }
+        }
+      });
+      
+      // Update arrow visibility
+      if (galleryPrevBtn) {
+        galleryPrevBtn.disabled = currentGalleryIndex === 0;
+      }
+      if (galleryNextBtn) {
+        galleryNextBtn.disabled = currentGalleryIndex === galleryImages.length - 1;
+      }
+      
+      // Allow next animation after current one completes (500ms based on CSS)
+      setTimeout(() => {
+        isAnimating = false;
+        galleryImages.forEach(img => {
+          img.classList.remove('leaving-left', 'leaving-right', 'entering-from-left', 'entering-from-right');
+        });
+      }, 1000);
+    }
+    
+    // Navigate to next image
+    function galleryNext() {
+      if (currentGalleryIndex < galleryImages.length - 1 && !isAnimating) {
+        currentGalleryIndex++;
+        updateGalleryDisplay('next');
+      }
+    }
+    
+    // Navigate to previous image
+    function galleryPrevious() {
+      if (currentGalleryIndex > 0 && !isAnimating) {
+        currentGalleryIndex--;
+        updateGalleryDisplay('prev');
+      }
+    }
+    
+    // Click handlers for navigation arrows
+    if (galleryPrevBtn) {
+      galleryPrevBtn.addEventListener('click', galleryPrevious);
+    }
+    
+    if (galleryNextBtn) {
+      galleryNextBtn.addEventListener('click', galleryNext);
+    }
+    
+    // Click on image to open in lightbox
+    galleryContainer.addEventListener('click', function(e) {
+      // Don't open lightbox if clicking arrows
+      if (e.target.closest('.website-gallery-arrow')) {
+        return;
+      }
+      
+      // Create a temporary gallery item array for lightbox compatibility
+      const tempMediaItems = Array.from(galleryImages).map(img => ({
+        type: 'image',
+        src: img.src,
+        alt: img.alt || 'Gallery image'
+      }));
+      
+      // Manually trigger lightbox for the gallery
+      if (lightbox && lightboxContent) {
+        currentIndex = currentGalleryIndex;
+        mediaItems = tempMediaItems;
+        openLightbox(currentGalleryIndex);
+      }
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      // Only if gallery is focused or modal not open
+      if (!lightbox || !lightbox.classList.contains('active')) {
+        if (e.key === 'ArrowLeft') {
+          galleryPrevious();
+        } else if (e.key === 'ArrowRight') {
+          galleryNext();
+        }
+      }
+    });
+    
+    // Initialize gallery display
+    updateGalleryDisplay();
+  }
+  
 });
 
 /* ################################################# */
