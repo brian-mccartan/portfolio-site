@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
   integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/case-study.css">
@@ -22,8 +23,22 @@
 </head>
 <body>
 
-<!-- ################################################# -->
-<!-- MAIN NAV HEADER STRIP & HAMBURGER ICON ON MOBILE  -->
+<!-- SVG Icon Symbols -->
+<svg style="display: none;">
+  <symbol id="ux-insights-icon" viewBox="0 0 85.04 93.54">
+    <path d="M43.71,16.44c-7.15-.3-14.01,2.17-19.17,7.09-5.17,4.92-8.05,11.52-8.05,18.61,0,5.81,1.89,11.32,5.56,15.95,3.18,4.04,5.36,7.88,6.76,11.91l.1.3v10.34c0,1.28.99,2.46,2.28,2.66.5,5.71,5.36,10.24,11.33,10.24s10.83-4.53,11.33-10.34c1.29-.2,2.28-1.28,2.28-2.66v-10.24l.1-.3c1.39-4.04,3.58-7.88,6.76-11.82,3.87-4.82,5.86-10.93,5.56-17.03-.7-13.29-11.52-24.12-24.84-24.72ZM50.67,71.39v6.5h-16.29v-6.5h16.29ZM42.52,88.13c-2.98,0-5.36-2.17-5.86-4.92h11.72c-.5,2.86-2.88,4.92-5.86,4.92ZM58.61,54.75c-2.98,3.74-5.17,7.38-6.76,11.23h-18.68c-1.59-3.74-3.78-7.48-6.76-11.23-2.88-3.64-4.37-7.98-4.37-12.6,0-5.61,2.28-10.83,6.36-14.77,4.07-3.84,9.44-5.91,15.2-5.61,10.53.49,19.07,9.06,19.57,19.4.1,5.02-1.49,9.75-4.57,13.59Z"/>
+    <path d="M42.52,10.34c1.49,0,2.68-1.18,2.68-2.66V2.66c0-1.48-1.19-2.66-2.68-2.66s-2.68,1.18-2.68,2.66v5.02c0,1.48,1.19,2.66,2.68,2.66Z"/>
+    <path d="M22.75,13.69c.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39,1.29-.79,1.79-2.36.99-3.64l-2.48-4.33c-.79-1.28-2.38-1.77-3.68-.98-1.29.79-1.79,2.36-.99,3.64l2.38,4.33Z"/>
+    <path d="M13.71,22.55l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.7-1.18.2-2.86-1.09-3.64Z"/>
+    <path d="M10.43,42.14c0-1.48-1.19-2.66-2.68-2.66H2.68c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49.1,2.68-1.18,2.68-2.66Z"/>
+    <path d="M11.03,57.11l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.48-1.77-3.78-.98Z"/>
+    <path d="M78.38,59.57l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.6-1.28.2-2.86-1.09-3.64Z"/>
+    <path d="M82.36,39.49h-5.07c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49,0,2.68-1.18,2.68-2.66,0-1.48-1.19-2.66-2.68-2.66Z"/>
+    <path d="M72.62,27.57c.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.38-1.77-3.68-.98l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.98,1.39,1.38,2.28,1.38Z"/>
+    <path d="M58.51,14.67c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38l2.48-4.33c.79-1.28.3-2.95-.99-3.64-1.29-.79-2.98-.3-3.68.98l-2.48,4.33c-.79,1.18-.4,2.86.89,3.64Z"/>
+  </symbol>
+</svg>
+
 <!-- ################################################# -->
 
 <!-- ### Desktop Navigation Links ### -->
@@ -136,7 +151,7 @@
 
 
 <!-- ============================================= -->
-<!-- !! MAKE THIS THE !! CHALLENGE SECTION -->
+<!-- THE CHALLENGE SECTION -->
 <!-- ============================================= -->
 
   <section class="ux-cs-section ux-cs-section-intro--blue">
@@ -184,7 +199,7 @@
     </div>
   </section>
 
-  <!-- Full-width image: Design Process -->
+  <!-- Full-width image: Old Website -->
   <div class="ux-cs-full-image--blue">
     <p class="ux-cs-section-image-title">Here are some screenshots from the old Together Academy website:</p>
     <br>
@@ -204,271 +219,210 @@
 
   <section class="ux-cs-section ux-cs-section-intro--white">
     <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <hr style="border: none; border-top: 1px solid rgba(0, 0, 0, 0.1); opacity: 0.5; margin-bottom: 48px; width: 100px; margin: 0 0 24px 0;">
       <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">UNDERSTANDING</p>
 
       <h2 class="ux-cs-section-title reveal">Needs, pain points and goals</h2>
       <p class="ux-cs-section-body">Our process, as always, began with research.</p>
       <p class="ux-cs-section-body">Our UX Researcher Shauna, with assistance from me, carried out several interviews with key stakeholders to understand the Together Academy’s needs, pain points, and goals for the future of the website. Alongside this, I conducted a review of the existing website structure and sitemap with my colleague Priscila, as well as a peer review to understand what other similar websites were doing well.</p>
       <p class="ux-cs-section-body">The interviews and peer review helped us identify several content gaps and website issues, based on which we were then able to make recommendations.</p>
+      <br>
+      <br>
     </div>
   </section>
-
-  <!-- Full-width image: Sketching -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/Sketches.png" alt="Sketches" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Sketches_1_mbl.png" alt="Sketches mobile" loading="lazy">
-    </div>
-  </div>
 
     <section class="ux-cs-section ux-cs-section-end--white">
     <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <h3 class="ux-cs-h3-subsection">Prototyping & User Testing</h3>
-      <p class="ux-cs-section-body">Now we were able to start building a prototype. Taking full advantage of our Index Design System, we were able to quickly turn these ideas into a working prototype and start testing it with real users to try and validate some of the design assumptions we had made up to this point.</p>
-      <p class="ux-cs-section-body">In particular, what I wanted to understand was:</p>
-        <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">A.</span>
-            <p class="ux-cs-list-text">How well <i>(or not)</i> the demo site empowered users to do what they need to do...</p>
+    <p class="ux-cs-section-image-title">Here are some examples of the type of insights we found and our recommendations:</p>
+    <br>
+      <!-- Research Insights Container -->
+      <div class="ux-cs-research-insights-container">
+        
+        <!-- Insight 01 -->
+        <div class="ux-cs-research-insight-item reveal">
+          <div class="ux-cs-insight-title">
+            <svg class="ux-cs-insight-icon" viewBox="0 0 85.04 93.54" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M43.71,16.44c-7.15-.3-14.01,2.17-19.17,7.09-5.17,4.92-8.05,11.52-8.05,18.61,0,5.81,1.89,11.32,5.56,15.95,3.18,4.04,5.36,7.88,6.76,11.91l.1.3v10.34c0,1.28.99,2.46,2.28,2.66.5,5.71,5.36,10.24,11.33,10.24s10.83-4.53,11.33-10.34c1.29-.2,2.28-1.28,2.28-2.66v-10.24l.1-.3c1.39-4.04,3.58-7.88,6.76-11.82,3.87-4.82,5.86-10.93,5.56-17.03-.7-13.29-11.52-24.12-24.84-24.72ZM50.67,71.39v6.5h-16.29v-6.5h16.29ZM42.52,88.13c-2.98,0-5.36-2.17-5.86-4.92h11.72c-.5,2.86-2.88,4.92-5.86,4.92ZM58.61,54.75c-2.98,3.74-5.17,7.38-6.76,11.23h-18.68c-1.59-3.74-3.78-7.48-6.76-11.23-2.88-3.64-4.37-7.98-4.37-12.6,0-5.61,2.28-10.83,6.36-14.77,4.07-3.84,9.44-5.91,15.2-5.61,10.53.49,19.07,9.06,19.57,19.4.1,5.02-1.49,9.75-4.57,13.59Z"/>
+              <path fill="currentColor" d="M42.52,10.34c1.49,0,2.68-1.18,2.68-2.66V2.66c0-1.48-1.19-2.66-2.68-2.66s-2.68,1.18-2.68,2.66v5.02c0,1.48,1.19,2.66,2.68,2.66Z"/>
+              <path fill="currentColor" d="M22.75,13.69c.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39,1.29-.79,1.79-2.36.99-3.64l-2.48-4.33c-.79-1.28-2.38-1.77-3.68-.98-1.29.79-1.79,2.36-.99,3.64l2.38,4.33Z"/>
+              <path fill="currentColor" d="M13.71,22.55l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.7-1.18.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M10.43,42.14c0-1.48-1.19-2.66-2.68-2.66H2.68c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49.1,2.68-1.18,2.68-2.66Z"/>
+              <path fill="currentColor" d="M11.03,57.11l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.48-1.77-3.78-.98Z"/>
+              <path fill="currentColor" d="M78.38,59.57l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.6-1.28.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M82.36,39.49h-5.07c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49,0,2.68-1.18,2.68-2.66,0-1.48-1.19-2.66-2.68-2.66Z"/>
+              <path fill="currentColor" d="M72.62,27.57c.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.38-1.77-3.68-.98l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.98,1.39,1.38,2.28,1.38Z"/>
+              <path fill="currentColor" d="M58.51,14.67c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38l2.48-4.33c.79-1.28.3-2.95-.99-3.64-1.29-.79-2.98-.3-3.68.98l-2.48,4.33c-.79,1.18-.4,2.86.89,3.64Z"/>
+            </svg>
+            <p class="ux-cs-insight-title-text">Insight 01</p>
           </div>
-          <p class="ux-cs-section-body">...and...</p>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">B.</span>
-            <p class="ux-cs-list-text">...how easily <i>(or not)</i> they understood what it was they were supposed to do as they navigated their way around the site.</p>
-          </div>
+          <p class="ux-cs-insight-body">The Together Academy is different from existing training programs or government services</p>
+          <p class="ux-cs-insight-recommendations-title">Recommendations:</p>
+          <ul class="ux-cs-insight-recommendations-list">
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Communicate what Together Academy does differently.</span>
+            </li>
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Showcase with photography how the Together Academy is superior to existing services.</span>
+            </li>
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Make clear that the Together Academy programmes focus on practical and visual learning - a better suited learning style for those with Down syndrome.</span>
+            </li>
+          </ul>
         </div>
-      <p class="ux-cs-section-body">From this user testing I was able to draw up a list of further experience improvements which we applied to the design before starting the process of working with the Development team to build the real thing.</p>
-    </div>
-  </section>
 
+        <!-- Insight 02 -->
+        <div class="ux-cs-research-insight-item reveal">
+          <div class="ux-cs-insight-title">
+            <svg class="ux-cs-insight-icon" viewBox="0 0 85.04 93.54" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M43.71,16.44c-7.15-.3-14.01,2.17-19.17,7.09-5.17,4.92-8.05,11.52-8.05,18.61,0,5.81,1.89,11.32,5.56,15.95,3.18,4.04,5.36,7.88,6.76,11.91l.1.3v10.34c0,1.28.99,2.46,2.28,2.66.5,5.71,5.36,10.24,11.33,10.24s10.83-4.53,11.33-10.34c1.29-.2,2.28-1.28,2.28-2.66v-10.24l.1-.3c1.39-4.04,3.58-7.88,6.76-11.82,3.87-4.82,5.86-10.93,5.56-17.03-.7-13.29-11.52-24.12-24.84-24.72ZM50.67,71.39v6.5h-16.29v-6.5h16.29ZM42.52,88.13c-2.98,0-5.36-2.17-5.86-4.92h11.72c-.5,2.86-2.88,4.92-5.86,4.92ZM58.61,54.75c-2.98,3.74-5.17,7.38-6.76,11.23h-18.68c-1.59-3.74-3.78-7.48-6.76-11.23-2.88-3.64-4.37-7.98-4.37-12.6,0-5.61,2.28-10.83,6.36-14.77,4.07-3.84,9.44-5.91,15.2-5.61,10.53.49,19.07,9.06,19.57,19.4.1,5.02-1.49,9.75-4.57,13.59Z"/>
+              <path fill="currentColor" d="M42.52,10.34c1.49,0,2.68-1.18,2.68-2.66V2.66c0-1.48-1.19-2.66-2.68-2.66s-2.68,1.18-2.68,2.66v5.02c0,1.48,1.19,2.66,2.68,2.66Z"/>
+              <path fill="currentColor" d="M22.75,13.69c.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39,1.29-.79,1.79-2.36.99-3.64l-2.48-4.33c-.79-1.28-2.38-1.77-3.68-.98-1.29.79-1.79,2.36-.99,3.64l2.38,4.33Z"/>
+              <path fill="currentColor" d="M13.71,22.55l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.7-1.18.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M10.43,42.14c0-1.48-1.19-2.66-2.68-2.66H2.68c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49.1,2.68-1.18,2.68-2.66Z"/>
+              <path fill="currentColor" d="M11.03,57.11l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.48-1.77-3.78-.98Z"/>
+              <path fill="currentColor" d="M78.38,59.57l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.6-1.28.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M82.36,39.49h-5.07c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49,0,2.68-1.18,2.68-2.66,0-1.48-1.19-2.66-2.68-2.66Z"/>
+              <path fill="currentColor" d="M72.62,27.57c.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.38-1.77-3.68-.98l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.98,1.39,1.38,2.28,1.38Z"/>
+              <path fill="currentColor" d="M58.51,14.67c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38l2.48-4.33c.79-1.28.3-2.95-.99-3.64-1.29-.79-2.98-.3-3.68.98l-2.48,4.33c-.79,1.18-.4,2.86.89,3.64Z"/>
+            </svg>
+            <p class="ux-cs-insight-title-text">Insight 02</p>
+          </div>
+          <p class="ux-cs-insight-body">The Together Academy wants to break the stereotype that people with Down Syndrome are incapable of ordinary things such as employment</p>
+          <p class="ux-cs-insight-recommendations-title">Recommendations:</p>
+          <ul class="ux-cs-insight-recommendations-list">
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Showcase the young adults' stories (testimonials / impact stories).</span>
+            </li>
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Communicate that the Together Academy is there to help both the young adults and parents realise their capabilities that already exist.</span>
+            </li>
+          </ul>
+        </div>
 
-
-  <!-- ============================================= -->
-  <!-- LAUNCHING MVP SECTION -->
-  <!-- ============================================= -->
-
-  <section class="ux-cs-section ux-cs-section-intro--blue">
-    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
-      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">BETA RELEASE</p>
-
-      <h2 class="ux-cs-section-title reveal">Launching our MVP</h2>
-      <p class="ux-cs-section-body">With an MVP built and tested, we were ready to share this internally as a beta release. I felt that the perfect setting for this launch would be at our annual <b>Dublin Offsite</b> in the <b>Aviva Stadium</b> and, with <b>300 people in attendance</b>, I knew this would be an excellent opportunity to share our excitement about the work.</p>
-      <p class="ux-cs-section-body">But instead of just explaining our work, I knew I needed to present a compelling narrative. So I created a product launch video (below), to try and engage people with our passion, and make them feel confident, interested, and optimistic about how this new tool was going to help us all.</p>
-      <p class="ux-cs-section-body">The presentation was a success and the response was fantastic!</p>
-    </div>
-  </section>
-
-  <!-- Full-width image: Dublin Offsite -->
-  <div class="ux-cs-full-image--blue">
-    <img src="images/Offsite.png" alt="Dublin Offsite event at Aviva Stadium" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Offsite_Mobile.png" alt="Dublin Offsite event at Aviva Stadium" loading="lazy">
-    </div>
-  </div>
-
-  <section class="ux-cs-section ux-cs-section-end--blue">
-    <div class="case-study-video-embed">
-      <div class="video-wrapper">
-        <iframe 
-      src="https://player.vimeo.com/video/829777798?title=0"
-      frameborder="0"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-        </iframe>
+        <!-- Insight 03 -->
+        <div class="ux-cs-research-insight-item reveal">
+          <div class="ux-cs-insight-title">
+            <svg class="ux-cs-insight-icon" viewBox="0 0 85.04 93.54" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M43.71,16.44c-7.15-.3-14.01,2.17-19.17,7.09-5.17,4.92-8.05,11.52-8.05,18.61,0,5.81,1.89,11.32,5.56,15.95,3.18,4.04,5.36,7.88,6.76,11.91l.1.3v10.34c0,1.28.99,2.46,2.28,2.66.5,5.71,5.36,10.24,11.33,10.24s10.83-4.53,11.33-10.34c1.29-.2,2.28-1.28,2.28-2.66v-10.24l.1-.3c1.39-4.04,3.58-7.88,6.76-11.82,3.87-4.82,5.86-10.93,5.56-17.03-.7-13.29-11.52-24.12-24.84-24.72ZM50.67,71.39v6.5h-16.29v-6.5h16.29ZM42.52,88.13c-2.98,0-5.36-2.17-5.86-4.92h11.72c-.5,2.86-2.88,4.92-5.86,4.92ZM58.61,54.75c-2.98,3.74-5.17,7.38-6.76,11.23h-18.68c-1.59-3.74-3.78-7.48-6.76-11.23-2.88-3.64-4.37-7.98-4.37-12.6,0-5.61,2.28-10.83,6.36-14.77,4.07-3.84,9.44-5.91,15.2-5.61,10.53.49,19.07,9.06,19.57,19.4.1,5.02-1.49,9.75-4.57,13.59Z"/>
+              <path fill="currentColor" d="M42.52,10.34c1.49,0,2.68-1.18,2.68-2.66V2.66c0-1.48-1.19-2.66-2.68-2.66s-2.68,1.18-2.68,2.66v5.02c0,1.48,1.19,2.66,2.68,2.66Z"/>
+              <path fill="currentColor" d="M22.75,13.69c.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39,1.29-.79,1.79-2.36.99-3.64l-2.48-4.33c-.79-1.28-2.38-1.77-3.68-.98-1.29.79-1.79,2.36-.99,3.64l2.38,4.33Z"/>
+              <path fill="currentColor" d="M13.71,22.55l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.7-1.18.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M10.43,42.14c0-1.48-1.19-2.66-2.68-2.66H2.68c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49.1,2.68-1.18,2.68-2.66Z"/>
+              <path fill="currentColor" d="M11.03,57.11l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.89,1.39,1.38,2.38,1.38.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.48-1.77-3.78-.98Z"/>
+              <path fill="currentColor" d="M78.38,59.57l-4.37-2.46c-1.29-.79-2.98-.3-3.68.98-.79,1.28-.3,2.95.99,3.64l4.37,2.46c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38.6-1.28.2-2.86-1.09-3.64Z"/>
+              <path fill="currentColor" d="M82.36,39.49h-5.07c-1.49,0-2.68,1.18-2.68,2.66s1.19,2.66,2.68,2.66h5.07c1.49,0,2.68-1.18,2.68-2.66,0-1.48-1.19-2.66-2.68-2.66Z"/>
+              <path fill="currentColor" d="M72.62,27.57c.5,0,.89-.1,1.39-.39l4.37-2.46c1.29-.79,1.79-2.36.99-3.64-.79-1.28-2.38-1.77-3.68-.98l-4.37,2.46c-1.29.79-1.79,2.36-.99,3.64.5.98,1.39,1.38,2.28,1.38Z"/>
+              <path fill="currentColor" d="M58.51,14.67c.4.2.89.39,1.39.39.89,0,1.89-.49,2.38-1.38l2.48-4.33c.79-1.28.3-2.95-.99-3.64-1.29-.79-2.98-.3-3.68.98l-2.48,4.33c-.79,1.18-.4,2.86.89,3.64Z"/>
+            </svg>
+            <p class="ux-cs-insight-title-text">Insight 03</p>
+          </div>
+          <p class="ux-cs-insight-body">The Together Academy wants to increase the visibility of individuals with Down Syndrome in society but this is impossible without support</p>
+          <p class="ux-cs-insight-recommendations-title">Recommendations:</p>
+          <ul class="ux-cs-insight-recommendations-list">
+            <li class="ux-cs-insight-recommendations-item">
+              <span class="ux-cs-insight-bullet">−</span>
+              <span>Provide examples showing the impact that partnerships and employers can have.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================= -->
-  <!-- PROCESS DRIVEN INNOVATION -->
+  <!-- IN PERSON WORKSHOP SECTION -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-section ux-cs-section-intro--blue">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">IN PERSON WORKSHOP</p>
+
+      <h2 class="ux-cs-section-title reveal">Pens, paper, tea and scones...</h2>
+      <p class="ux-cs-section-body">Armed with insights from the research, next came the fun part! We arranged an in-person workshop onsite at the Together Academy to validate our ideas and discuss our recommendations.</p>
+      <p class="ux-cs-section-body">We also presented a proposed, restructured sitemap for the content architecture. We felt that there were three core categories of information that the website needed to communicate – what Together Academy does, who they are and how to get involved. We also suggested using the Get Involved section to address specific audiences, ie. a page with information for employers, a page with information for students, and a page with information for the parents of prospective students.</p>
+      <p class="ux-cs-section-body">Together Academy were also keen to not be seen as a charity – they are a social enterprise. This was an important distinction for them as, while they are happy to receive assistance from supporters, they do not see themselves as entirely dependent on it. And so a decision was made to have a call-to-action button labelled "Support Us", rather than "Donate", which would link to an area of the shop and allow people to make a contributory donation if they wished.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: Sitemap -->
+  <div class="ux-cs-full-image--blue">
+    <img src="images/Sitemaps_1_lg.png" alt="Together Academy Sitemap" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/Sitemaps_1_mb.png" alt="Together Academy Sitemap - Mobile" loading="lazy">
+    </div>
+  </div>
+
+  <section class="ux-cs-section ux-cs-section-body--blue">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <p class="ux-cs-section-body">It was great to finally meet the guys running the Together Academy face-to-face, but we also got to meet the students and see what they do day-to-day. We were hugely impressed – no more so than by the delicious fresh scones that were served to us in the Café, freshly baked by the students themselves!</p>
+      <p class="ux-cs-section-body">Refreshed from the break, a sketching session followed next. Sketching is a key part of our design process, and the output consisted of a set of wireframes that were co-created with the Together Academy team.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: In Person Workshop -->
+  <div class="ux-cs-full-image--blue">
+    <img src="images/Workshop.png" alt="API Explorer Example" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/Workshop1_mb.png" alt="API Explorer Example mobile" loading="lazy">
+      <img src="images/Workshop2_mb.png" alt="API Explorer Example mobile" loading="lazy">
+      <img src="images/Workshop3_mb.png" alt="API Explorer Example mobile" loading="lazy">
+    </div>
+  </div>
+
+
+  <!-- ============================================= -->
+  <!-- INSIGHTS INTO ACTION -->
   <!-- ============================================= -->
 
   <section class="ux-cs-section ux-cs-section-intro--white">
     <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
       <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
-      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">INSIGHTS INTO ACTION</p>
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">DESIGN & DEVELOPMENT</p>
 
-      <h2 class="ux-cs-section-title reveal">Process-driven innovation</h2>
-      <div class="process-innovation-images">
-        <img src="images/Success1.gif" alt="Process innovation GIF 1" class="animated-image-1" loading="lazy">
-        <img src="images/Success2.gif" alt="Process innovation GIF 2" class="animated-image-2" loading="lazy">
-      </div>
-      <p class="ux-cs-section-body">The process we followed on this project was a key part of finding ways to innovate and generate ideas. From that user research we carried out at the start of the project, it immediately became very clear that CSMs and Sales Reps felt there was a <b>lack of support</b> in a number of areas:</p>
-        <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">01</span>
-            <p class="ux-cs-list-text">In understanding our REST API</p>
-          </div>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">02</span>
-            <p class="ux-cs-list-text">In being able to explain things in layman’s terms</p>
-          </div>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">03</span>
-            <p class="ux-cs-list-text">In having visibility of product updates</p>
-          </div>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">04</span>
-            <p class="ux-cs-list-text">In finding relevant supporting documentation</p>
-          </div>
-        </div>
-      <p class="ux-cs-section-body">And so from this I was able to evolve the original ask – from a static checkout experience that we could just let people click around in – to more of a knowledge hub, that offered internal as well as external support in understanding these products and capabilities we offer.</p>
-      <p class="ux-cs-section-body">We were able to do this in a number of ways throughout the demo site:</p>    
-        <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">01</span>
-            <p class="ux-cs-list-text">Plain language descriptions on the landing page</p>
-          </div>
-        </div>
+      <h2 class="ux-cs-section-title reveal">Insights into action</h2>
+      <p class="ux-cs-section-body">We invested a large part of our allotted time into the early phases of the process, but the benefit of this was that we were now armed with really rich insights, feedback and stakeholder consensus, which would make the next stage of the process much easier to get through. But we still had to work fast!</p>  
+      <p class="ux-cs-section-body">After the workshop, Priscila (UX Designer) and I moved into the design phase – planning, allocating jobs and building out a prototype of the website based on the wireframes from the in-person workshop. The prototype allowed the Together Academy to get a visual sense of how the website would look and feel when complete and, once they had reviewed, they were over the moon! They mentioned to us that they felt the new website would empower them to promote their work and engage with prospective students and employers in a way that they weren’t able to do previously.</p>
+      <p class="ux-cs-section-body">The development phase came next with Rom (UI Developer) responsible for developing the website using WordPress. Meanwhile, Eoin (VP Software Engineering) integrated the WooCommerce plugin on the website which gave the Together Academy the ability to sell merchandise and Christmas hampers through a Global Payments e-commerce solution.</p>
+      <br>
+      <br>
+      <br>
     </div>
   </section>
-
-  <!-- Full-width image: Plain Language examples -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/Landing_language_lg.png" alt="Plain Language Examples" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Landing_language_1_ml.png" alt="Plain Language Examples mobile" loading="lazy">
-    </div>
-  </div>
-
-  <section class="ux-cs-section ux-cs-section-body--white">
-    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-        <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">02</span>
-            <p class="ux-cs-list-text">Side panels offering clear instructions</p>
-          </div>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">03</span>
-            <p class="ux-cs-list-text">Links throughout the site to further relevant information on our Developer Hub</p>
-          </div>
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">04</span>
-            <p class="ux-cs-list-text">Useful features, such as the Test Cards drawer, to enrich the demo experience</p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Full-width image: Useful features -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/Inner_Demo_Helpers_lg.png" alt="Useful Features Examples" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Inner_Demo_Helpers_1_ml.png" alt="Useful Features Examples mobile" loading="lazy">
-    </div>
-  </div>
-
-  <section class="ux-cs-section ux-cs-section-body--white">
-    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <p class="ux-cs-section-body">Another crucial part of the process were those early Discovery Sessions. Holding these workshops provided the opportunity to collaborate with stakeholders and bring clarity and consensus on the “why” of the demo site, before we even started designing the solution.</p>    
-      <p class="ux-cs-section-body">And they also generated lots of new ideas, such as:</p>    
-      <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">01</span>
-            <p class="ux-cs-list-text">Custom Journey Builder
-            <br>
-            <span style="font-weight: 300;">Users can build custom payment journeys by adding Value Adds on top of the default journey and then they can demo what that specific payment flow would look like.</span></p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Full-width image: Custom Journey Builder -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/Value Adds_lg.png" alt="Custom Journey Builder Example" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Value Adds_1_ml.png" alt="Custom Journey Builder Example mobile" loading="lazy">
-    </div>
-  </div>
-
-  <section class="ux-cs-section ux-cs-section-body--white">
-    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">02</span>
-            <p class="ux-cs-list-text">Vertical Specific Messaging
-            <br>
-            <span style="font-weight: 300;">Designed into the checkout interfaces are messaging that highlight how certain value adds can be of particular benefit to specific target markets.</span></p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Full-width image: Vertical Specific Messaging -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/Vertical Messaging_lg.png" alt="Vertical Specific Messaging Example" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/Vertical Message_ml.png" alt="Vertical Specific Messaging Example mobile" loading="lazy">
-    </div>
-  </div>
-
-  <section class="ux-cs-section ux-cs-section-body--white">
-    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
-      <!-- Numbered List - New Styled Format -->
-        <div class="ux-cs-numbered-list-container">
-          <div class="ux-cs-numbered-list-item--blue reveal">
-            <span class="ux-cs-list-number">03</span>
-            <p class="ux-cs-list-text">API Explorer
-            <br>
-            <span style="font-weight: 300;">We identified that, on calls with merchants and their technical stakeholders, Sale Reps struggled to field questions around integration. And so we added an API Explorer. This allows users to see, in real-time, the calls and responses required to integrate these solutions into a merchant's own checkout.</span></p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- Full-width image: API Explorer -->
-  <div class="ux-cs-full-image--white">
-    <img src="images/API Explorer_lg.png" alt="API Explorer Example" loading="lazy">
-
-    <!-- Mobile images - displayed on devices 768px and below -->
-    <div class="ux-cs-full-image--mobile">
-      <img src="images/API Explorer_1_ml.png" alt="API Explorer Example mobile" loading="lazy">
-    </div>
-  </div>
 
 
   <!-- ============================================= -->
-  <!-- DESIGN PRINCIPLES SECTION -->
+  <!-- WEBSITE LAUNCH SECTION -->
   <!-- ============================================= -->
 
   <section class="ux-cs-section ux-cs-section-intro--blue">
     <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
       <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
-      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">DESIGN OPERATIONS</p>
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">WEBSITE LAUNCH</p>
 
-      <h2 class="ux-cs-section-title reveal">Encapsulating Design Principles</h2>
-      <p class="ux-cs-section-body">Looking back on this project, one thing I am quite proud of is the way the work encapsulated some of our Design Principles at Global Payments. [<a href="design-operations-ux.html">And for which I designed the visual language</a>].</p>
+      <h2 class="ux-cs-section-title reveal">Climb, soar, believe, achieve...</h2>
+      <p class="ux-cs-section-body">The new site officially launched on 28th of October 2022. This was such an enjoyable volunteering project. Because what the people in Together Academy are trying to achieve is to build more empathy within our society. They understand their students and their goals, as well as their pain points, and they want to facilitate these students in achieving those goals.</p>
+      <p class="ux-cs-section-body">And in essence, that is what we try to do as UX designers. What I work on day-to-day is not as profoundly life-changing as what the guys in Together Academy do, and so it was an absolute pleasure for them to allow us to work with them, even just for a very short time, and experience first hand the impact of what they do.</p>
     </div>
   </section>
 
-  <!-- Full-width image: Design Principles -->
+  <!-- Full-width image: Website Launch -->
   <div class="ux-cs-full-image--blue">
-    <img src="images/Principles.png" alt="Global Payments Design Principles visual language" loading="lazy">
+    <img src="images/Website Launch.png" alt="Website Launch" loading="lazy">
 
     <!-- Mobile images - displayed on devices 768px and below -->
     <div class="ux-cs-full-image--mobile">
-      <img src="images/Principles_1_mbl.png" alt="Global Payments Design Principles visual language" loading="lazy">
+      <img src="images/Web Launch_mb.png" alt="Website Launch" loading="lazy">
     </div>
   </div>
 

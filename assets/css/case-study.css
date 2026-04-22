@@ -1205,6 +1205,93 @@
 }
 
 /* ================================================== */
+/* UX CASE STUDY: RESEARCH INSIGHTS CONTAINER        */
+/* ================================================== */
+
+.ux-cs-research-insights-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 24px 0;
+  padding: 0px 0px 16px 0px;
+}
+
+.ux-cs-research-insight-item {
+  background: rgb(235, 246, 253, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+  padding: 32px 52px 52px 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ux-cs-insight-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ux-cs-insight-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--dark-blue);
+}
+
+.ux-cs-insight-title-text {
+  color: var(--light-blue);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+.ux-cs-insight-body {
+  color: var(--standard-text-color);
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0em;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.ux-cs-insight-recommendations-title {
+  color: var(--light-blue);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.ux-cs-insight-recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ux-cs-insight-recommendations-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--standard-text-color);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.ux-cs-insight-bullet {
+  color: var(--light-blue);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ================================================== */
 /* UX CASE STUDY: A/B TESTING POINTS                 */
 /* ================================================== */
 
