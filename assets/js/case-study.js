@@ -556,6 +556,34 @@ vimeoIframes.forEach(iframe => vimeoObserver.observe(iframe));
       }
     });
     
+    // Touch/Swipe navigation for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    galleryContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    galleryContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, false);
+
+    function handleSwipe() {
+      const swipeThreshold = 50; // minimum distance for a swipe
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swiped left - show next image
+          galleryNext();
+        } else {
+          // Swiped right - show previous image
+          galleryPrevious();
+        }
+      }
+    }
+    
     // Initialize gallery display
     updateGalleryDisplay();
   }
