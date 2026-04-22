@@ -839,6 +839,12 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 480px) {
+  .case-study-overview-text {
+    font-size: 20px;
+  }
+}
+
 
 /* UX Case Study: Overview 3 Column Section */
 .ux-cs-meta-item-title {
@@ -1515,10 +1521,16 @@
 
   .ux-cs-section-title {
     font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
   }
 
   .ux-cs-h3-subsection {
     font-size: 24px;
+  }
+
+  .ux-cs-section-body {
+    line-height: 1.55em;
   }
 
   .ux-cs-section-intro--blue,
