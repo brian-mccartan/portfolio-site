@@ -689,8 +689,21 @@
   }
 
   .nav-arrow {
-    font-size: 28px;
+    font-size: 12px;
   }
+
+  .nav-arrow svg {
+    width: 52px !important;
+  }
+
+  .nav-arrow.arrow-left {
+  left: 12px;
+  }
+
+  .nav-arrow.arrow-right {
+  right: 12px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1594,11 +1607,11 @@
   }
 
   .ux-cs-list-number {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .ux-cs-list-text {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .ux-cs-full-image {
@@ -1653,7 +1666,7 @@
 
   .ux-cs-research-insight-item {
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
-    padding: 16px 32px 32px 32px;
+    padding: 16px 20px 20px 20px;
   }
 
   .ux-cs-insight-body {
@@ -2011,12 +2024,12 @@
   }
 
   .testimonial-text {
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 4px;
   }
 
   .testimonial-attribution {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .testimonial-divider {
