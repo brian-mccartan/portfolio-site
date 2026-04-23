@@ -1310,6 +1310,62 @@
   flex-shrink: 0;
 }
 
+
+/* ================================================== */
+/* 2 COLUMN USER QUOTES OR KEY FINDINGS          */
+/* ================================================== */
+
+.ux-cs-numbered-list-container-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+.ux-cs-2col-insight-item {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  /* display: grid; */
+  /* grid-template-columns: 60px 1fr; */
+  /* gap: 0px; */
+  /* align-items: start; */
+}
+
+.ux-cs-2col-insight-item--blue {
+  background: rgb(235, 246, 253, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  /* display: grid; */
+  grid-template-columns: 60px 1fr;
+  gap: 0px;
+  align-items: start;
+}
+
+.ux-cs-2col-insight-text {
+  color: var(--dark-blue);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .ux-cs-numbered-list-container-2col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ux-cs-2col-insight-text {
+    font-size: 18px;
+  }
+}
+
+
 /* ================================================== */
 /* UX CASE STUDY: A/B TESTING POINTS                 */
 /* ================================================== */
