@@ -338,7 +338,7 @@
   height: 0;
   overflow: hidden;
   border-radius: 4px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .case-study-video-embed .video-wrapper iframe {
@@ -1197,7 +1197,7 @@
 .ux-cs-numbered-list-item--blue {
   background: rgb(235, 246, 253, 0.9);
   border-radius: 12px;
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: grid;
   grid-template-columns: 60px 1fr;

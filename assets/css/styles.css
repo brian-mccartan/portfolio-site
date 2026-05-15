@@ -270,7 +270,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 }
 
 .project { border: 0px solid #ddd; padding: 20px; border-radius: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity: 0; transform: translateY(30px); }
-.project:hover { transform: translateY(-8px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+.project:hover { transform: translateY(-8px); box-shadow: 0 6px 16px rgba(0,0,0,0.4); }
 .project img { width: 100%; border-radius: 0px; margin-bottom: 15px; transition: transform 0.3s ease; }
 .project h2 { font-size: 1.3rem; margin-bottom: 10px; }
 .project a { text-decoration: none; color: #0070f3; font-weight: 600; transition: color 0.3s ease; }
@@ -320,7 +320,7 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 .project-info .read-more { font-size: 1.125rem; display: flex; align-items: center; margin-top: 8px; color: var(--dark-blue); font-weight: 600; text-decoration: none; opacity: 0; transition: opacity 0.3s; }
 .project-info .read-more:hover { color: #062d64; }
 .read-more, .arrow { display: inline-block; margin-left: 0px; transition: opacity 0.6s cubic-bezier(.77,0,.18,1), transform 0.6s cubic-bezier(.77,0,.18,1), color 0.6s cubic-bezier(.77,0,.18,1); }
-.project.reveal:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+.project.reveal:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.6); }
 .project.reveal:hover .project-info { height: 180px; padding-top: 28px; padding-bottom: 28px; padding-left: 18px; padding-right: 18px; }
 .project.reveal:hover .read-more { opacity: 1; }
 .project.reveal:hover .arrow { transform: translateX(8px); }
