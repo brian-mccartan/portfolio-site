@@ -827,9 +827,9 @@ body { font-family: 'Work Sans', sans-serif; line-height: 1.6; color: #222; back
 /* Animation Delays */
 #nav-links .nav-link.fade-in { animation-delay: 0s; }
 .hero-h1.fade-in { animation-delay: 0.2s; }
-.hero-p.fade-in { animation-delay: 0.6s; }
-.hero-p.fade-in:nth-of-type(2) { animation-delay: 0.8s; }
-.hero-img.fade-in { animation-delay: 1s; }
+.hero-p.fade-in { animation-delay: 1s; }
+.hero-p.fade-in:nth-of-type(2) { animation-delay: 1.4s; }
+.hero-img.fade-in { animation-delay: 0.6s; }
 
 /* Scroll to behaviour */
 html.no-scroll, body.no-scroll {
