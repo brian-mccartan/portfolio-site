@@ -97,6 +97,7 @@
 
 @media (max-width: 768px) {
   .case-study-award {
+    width: 95%;
     padding: 0 8px;
     margin-bottom: 32px;
   }
@@ -819,6 +820,15 @@
 .ux-cs-title-block {
   margin-bottom: 24px;
   padding-top: 0px;
+}
+
+.ux-cs-title-block--two-column {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-top: 0;
 }
 
 .ux-cs-label {
@@ -1578,6 +1588,18 @@
 
   .ux-cs-title-block {
     margin-bottom: 8px;
+  }
+
+  .ux-cs-title-block--two-column {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 8px;
+  }
+
+  .ux-cs-title-right .case-study-award {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
   }
 
   .ux-cs-h1 {

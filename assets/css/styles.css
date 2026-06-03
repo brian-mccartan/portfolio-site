@@ -986,12 +986,44 @@ html.no-scroll, body.no-scroll {
 /* ### HOMEPAGE HERO SECTION ### */
 
 @media (max-width: 600px) {
+  .panel-text {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .panel-text .hero-h1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .panel-text .hyphen {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .panel-text h2 { 
     font-size: 18px;
     line-height: 1.6 }
+  .panel-text-2col {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .panel-text-2col .hero-h1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .panel-text-2col .hyphen {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .panel-text-2col h2 {
     font-size: 18px;
     line-height: 1.6 }
+  .panel-col-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .panel-col-left p {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   }
 
   /* ### STANDARD PANEL TEXT ADJUSTMENTS ### */
@@ -1048,6 +1080,8 @@ html.no-scroll, body.no-scroll {
   .bullet-points {
     grid-template-columns: 1fr; /* Make 2 column grid into single column on mobile */
     gap: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .bullet-item p {
     font-size: 16px; /* display text at slightly larger size on small screens */
