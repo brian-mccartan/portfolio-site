@@ -1592,7 +1592,7 @@
 
   .ux-cs-title-block--two-column {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 56px;
     margin-bottom: 8px;
   }
 
