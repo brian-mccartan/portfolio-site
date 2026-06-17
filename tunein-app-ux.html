@@ -1,0 +1,464 @@
+<!-- ################################################# -->
+<!-- DOCUMENT HEAD  -->
+<!-- ################################################# -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tune.In! | Brian McCartan | UX Designer</title>
+  <link rel="icon" type="image/x-icon" href="images/B Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/case-study.css">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="The speed of product creation with AI allows ideas to be tested almost instantly, but it also exposes the risks of bypassing discovery, research and strategic thinking. In this article I’ve tried to lay out the lessons I learned from a User Experience perspective when speed became the primary objective.">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+  <meta name="google-site-verification" content="lF_fKopsnQJ8RcVBUEdVuOFLt67cwRFSuCU70AO0Q5w">
+  <link rel="canonical" href="https://www.brian-design.net/tunein-app-ux">
+
+  <!-- Open Graph tags for social sharing -->
+  <meta property="og:title" content="Tune.In! | Brian McCartan – UX Designer">
+  <meta property="og:description" content="The speed of product creation with AI allows ideas to be tested almost instantly, but it also exposes the risks of bypassing discovery, research and strategic thinking. In this article I’ve tried to lay out the lessons I learned from a User Experience perspective when speed became the primary objective.">
+  <meta property="og:url" content="https://www.brian-design.net/tunein-app-ux">
+  <meta property="og:site_name" content="Brian McCartan">
+  <meta property="og:type" content="website">
+
+</head>
+<body>
+
+<!-- ################################################# -->
+<!-- MAIN NAV HEADER STRIP & HAMBURGER ICON ON MOBILE  -->
+<!-- ################################################# -->
+
+<!-- ### Desktop Navigation Links ### -->
+
+<div class="sticky-header-wrap">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Brian McCartan Portfolio">
+      <img src="images/B Logo Nav.png" alt="Brian Design logo">
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul id="nav-links">
+        <li><a href="index.html#ux-work" class="nav-link fade-in active">UX WORK</a></li>
+        <li><a href="design-work.html" class="nav-link fade-in">DESIGN WORK</a></li>
+        <li><a href="about-me.html" class="nav-link fade-in">ABOUT ME</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ### Mobile Hamburger Button ### -->
+
+   <div class="nav-toggle-wrapper">
+    <button id="nav-toggle" class="nav-toggle mobile" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+   </div>
+</div>
+
+
+<!-- ### Mobile Navigation Overlay ### -->
+
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <div class="mobile-nav-panel">
+    <ul>
+      <li><a href="index.html#ux-work" class="active">UX WORK</a></li>
+      <li><a href="design-work.html">DESIGN WORK</a></li>
+      <li><a href="about-me.html">ABOUT ME</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ### X Button for closing mobile nav panel that sits ABOVE overlay ### -->
+
+<button id="nav-close" class="nav-close mobile" aria-label="Close navigation">
+  <span></span><span></span>
+</button>
+
+
+<!-- ################################################# -->
+<!-- MAIN PAGE CONTENT  -->
+<!-- ################################################# -->
+
+<main class="site-main" id="case-study-main">
+
+  <!-- ============================================= -->
+  <!-- HERO IMAGE -->
+  <!-- ============================================= -->
+
+<section class="case-study-hero">
+  <div class="case-study-hero-media">
+    <img src="images/Tunein_Header.jpg" alt="Tune.In! Demo Hero Image" loading="lazy">
+  </div>
+</section>
+
+
+  <!-- ============================================= -->
+  <!-- INTRO: LABEL + TITLE -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-title-block container">
+    <p class="ux-cs-label">UX DESIGN CASE STUDY</p>
+    <h1 class="ux-cs-h1">Tune.In!</h1>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- OVERVIEW SECTION -->
+  <!-- ============================================= -->
+
+<section class="ux-cs-section">
+  <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+
+    <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+    <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">Overview</p>
+
+    <p class="case-study-overview-text reveal">In early June 2026, my family and my younger brother’s family were on a camping weekend together at Hidden Valley in gorgeous Co. Wicklow, Ireland. We got great sunshine, had the BBQ on the go, the kids laughed and played all weekend. For us adults, we had this card based music trivia game – scan a QR code, play a song, guess the artist and the song name, turn over the card and see the answer. We had great fun playing this all weekend but once the cards ran out so did the fun. And there and then myself and my brother began discussing how we might recreate the concept digitally.</p>
+    <p class="case-study-overview-text reveal">And so, rather than following my usual UX process, I decided I’d treat the idea as a bit of an experiment. Using Lovable for development, we moved directly from concept to implementation, building up to a functional multiplayer prototype over the space of a few hours.</p>
+    <p class="case-study-overview-text reveal">I will admit the result was very exciting, but at the same time very revealing. The speed of product creation with AI allows ideas to be tested almost instantly, but it also exposes the risks of bypassing discovery, research and strategic thinking. In this article I’ve tried to lay out the lessons I learned from a User Experience perspective when speed became the primary objective.</p>
+
+    <div class="ux-cs-meta-grid reveal">
+      <div class="ux-cs-meta-item">
+        <span class="ux-cs-meta-item-title">Timeline</span>
+        <p class="ux-cs-meta-item-body">2 - 3 days</p>
+      </div>
+      <div class="ux-cs-meta-item">
+        <span class="ux-cs-meta-item-title">Role</span>
+        <p class="ux-cs-meta-item-body">UX Designer / Product Designer</p>
+      </div>
+      <div class="ux-cs-meta-item">
+        <span class="ux-cs-meta-item-title">Tools</span>
+        <p class="ux-cs-meta-item-body">Lovable, GitHub, Cloudflare</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ============================================= -->
+  <!-- THE APPROACH SECTION -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-section ux-cs-section-intro--blue">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">THE APPROACH</p>
+
+      <h2 class="ux-cs-section-title reveal">Exploring what happens when discovery is traded for speed</h2>
+      <p class="ux-cs-section-body">We began with an idea locked in our heads of how we wanted the game to work, which was pretty much a direct translation of the physical card game into digital form. Utilising the Spotify API for songs meant requiring users to authenticate themselves each time, so we instead hooked up to the iTunes preview API. This meant that instead of playing full songs, the game would instead only feature iTunes’ freely available 30-second preview clips.</p>
+      <p class="ux-cs-section-body">You could play a round, mark your correct guesses, see your score, and pass the phone to the next player. This first pass was enough to validate the fun of the idea, albeit that validation was entirely self-referential. We were playing our own game with our own assumptions baked in.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: Local Game -->
+  <div class="ux-cs-full-image--blue">
+    <img src="images/TuneIn_LocalGame_desktop.png" alt="Tune.In! Local Game desktop" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/TuneIn_LocalGame_mobile mix.png" alt="Tune.In! Local Game mobile" loading="lazy">
+    </div>
+  </div>
+
+
+  <!-- ============================================= -->
+  <!-- ITERATIVE EVOLUTION SECTION -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-section ux-cs-section-intro--white">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">ITERATIVE EVOLUTION</p>
+
+      <h2 class="ux-cs-section-title reveal">When building became the brainstorm</h2>
+      <p class="ux-cs-section-body">With this first prototype up and running, I began freely implementing new ideas into the game with the intention that these could increase engagement. I introduced streak bonuses, golden rounds (where points are doubled!), music trivia and contextual reactions, hoping to add moments of excitement and emotional feedback, and perhaps make the experience feel more dynamic without changing the core format.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: Iterative Evolution 1 -->
+  <div class="ux-cs-full-image--white">
+    <img src="images/TuneIn_IterativeEvolution_desktop.png" alt="Iterative Evolution Desktop" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/TuneIn_IterativeEvolution_mobile 1.png" alt="Iterative Evolution Mobile" loading="lazy">
+      <img src="images/TuneIn_IterativeEvolution_mobile 2.png" alt="Iterative Evolution Mobile 2" loading="lazy">
+    </div>
+  </div>
+
+    <section class="ux-cs-section ux-cs-section-body--white">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <p class="ux-cs-section-body">I expanded the idea further again and built out the capability to play the game remotely across multiple devices. What began as a local pass-and-play game evolved into a multiplayer experience, opening up entirely new possibilities for the game but also introducing challenges around synchronisation, fairness and game flow.</p>
+      <p class="ux-cs-section-body">Several further iterations quickly followed, including randomised turn order in remote games (not always starting with the host), enhanced answer validation, “fastest finger first” buzz rounds and clearer scoring feedback. While many of these new features certainly deepened the game experience, they were largely driven by intuition and observation rather than user research or validated evidence.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: Iterative Evolution 2 -->
+  <div class="ux-cs-full-image--white">
+    <img src="images/TuneIn_IterativeEvolution2_desktop.png" alt="Iterative Evolution2 Desktop" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/TuneIn_IterativeEvolution2_mobile1.png" alt="Iterative Evolution2 Mobile" loading="lazy">
+      <img src="images/TuneIn_IterativeEvolution2_mobile2.png" alt="Iterative Evolution2 Mobile 2" loading="lazy">
+    </div>
+  </div>
+
+
+
+  <!-- ============================================= -->
+  <!-- LEARNINGS SECTION -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-section ux-cs-section-intro--blue">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">LEARNINGS</p>
+
+      <h2 class="ux-cs-section-title reveal">Key Takeaways</h2>
+      <br>
+      <h3 class="ux-cs-h3-subsection">Rapid Prototyping Created Immediate Momentum</h3>
+      <p class="ux-cs-section-body">There’s no doubting that the greatest success we achieved was speed. The journey from idea to playable product took hours rather than weeks. Using AI dramatically reduced the effort that would have been required to move from concept to execution and this allowed me to test ideas while my enthusiasm was still high. And it also allowed me to quickly validate several technical assumptions including audio delivery to multiple devices, multiplayer synchronisation and answer-matching logic without any significant development investment required.</p>
+      <br>
+      <h3 class="ux-cs-h3-subsection">Building solutions before understanding problems</h3>
+      <p class="ux-cs-section-body">As I mentioned earlier, out of my own curiosity and as a small experiment, I skipped many of the activities I would normally advocate for as a UX professional. No user research was conducted. No competitive analysis was performed. No problem statement was defined. Decisions were driven almost entirely by my own personal experience and assumptions. The game was being built around the mechanics of the original card game rather than any clearly understood user need.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: Rapid Prototyping -->
+  <div class="ux-cs-full-image--blue">
+    <img src="images/TuneIn_RapidBuilding_desktop.png" alt="Rapid Protoyping Desktop" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/TuneIn_RapidBuilding_mobile.png" alt="Rapid Prototyping Mobile" loading="lazy">
+    </div>
+  </div>
+
+  <section class="ux-cs-section ux-cs-section-end--blue">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <h3 class="ux-cs-h3-subsection">Hidden Assumptions</h3>
+      <p class="ux-cs-section-body">Many core decisions were never validated...</p>
+        <!-- Numbered List - New Styled Format -->
+        <div class="ux-cs-numbered-list-container">
+          <div class="ux-cs-numbered-list-item reveal">
+            <span class="ux-cs-list-number">A.</span>
+            <p class="ux-cs-list-text">Are 30 second clips more preferable to players than getting to listen to the full song?</p>
+          </div>
+          <div class="ux-cs-numbered-list-item reveal">
+            <span class="ux-cs-list-number">B.</span>
+            <p class="ux-cs-list-text">Is connecting to a Spotify account really that much of an issue for users who want to play this game?</p>
+          </div>
+          <div class="ux-cs-numbered-list-item reveal">
+            <span class="ux-cs-list-number">C.</span>
+            <p class="ux-cs-list-text">Is guessing the year of release actually fun for people?</p>
+          </div>
+          <div class="ux-cs-numbered-list-item reveal">
+            <span class="ux-cs-list-number">D.</span>
+            <p class="ux-cs-list-text">Is competitive scoring the primary motivation?</p>
+          </div>
+          <div class="ux-cs-numbered-list-item reveal">
+            <span class="ux-cs-list-number">E.</span>
+            <p class="ux-cs-list-text">Are complex bonus systems actually enjoyable?</p>
+          </div>
+        </div>
+      <p class="ux-cs-section-body">In the spirit of “moving fast” these choices felt logical because they mirrored the physical game that inspired the concept. However, they remained assumptions rather than evidence-based decisions. Without research, it is impossible to know whether these decisions improve or limit the experience for people who want to play this game.</p>
+      <br>
+      <h3 class="ux-cs-h3-subsection">Speed grows debt and creates future risk</h3>
+      <p class="ux-cs-section-body">That same speed that accelerated progress also increased uncertainty. As I continued to rapidly add new features and deepen the overall experience, the cost of having to go back and change any of those fundamental assumptions grew. Future research could reveal that players prefer different game modes, or simpler scoring or alternative interaction patterns. Reworking or unpacking all of these features without breaking things and maintaining a coherent experience could require significant effort.</p>
+      <p class="ux-cs-section-body">The prototype demonstrated how quickly AI can generate solutions, but also how easily you can accumulate product, development and usability debt whenever discovery is absent from the design process.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- CONCLUSION SECTION -->
+  <!-- ============================================= -->
+
+  <section class="ux-cs-section ux-cs-section-intro--white">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <hr style="border: none; border-top: 2px solid var(--light-blue); width: 100px; margin: 0 0 24px 0;">
+      <p class="ux-cs-label" style="font-weight: 600; color: var(--dark-blue); margin-bottom: 40px;">CONCLUSION</p>
+
+      <h2 class="ux-cs-section-title reveal">AI accelerates building, not understanding</h2>
+      <p class="ux-cs-section-body">This project reinforced an important distinction for me, which is that AI tools can absolutely reduce the time required to create and test solutions by a huge factor. But what they do not replace is the need to understand users, define problems and establish evidence before making product decisions.</p>
+      <p class="ux-cs-section-body">Creating this music trivia game was just a low stakes experiment that I indulged myself in for a few hours. The worst-case scenario would have been that I spent a few hours of my own time building a game that nobody beyond me, my wife and kids ever plays. In that sense the cost of being wrong was completely negligible.</p>
+      <p class="ux-cs-section-body">But I suppose the real point of this for me, is that in larger organisations the consequences can be much greater. Many teams right now are investing significant time, money and effort building features that solve the wrong problem. AI may reduce the cost of building, but it still does not reduce the cost of building the wrong thing. And building the wrong thing can still bring significant cost – in human hours, in revenue and brand reputation.</p>
+    </div>
+  </section>
+
+  <!-- Full-width image: LinkedIn Article -->
+  <div class="ux-cs-full-image--white">
+    <img src="images/TuneIn_LinkedInArticle_desktop.png" alt="LinkedIn Article Desktop" loading="lazy">
+
+    <!-- Mobile images - displayed on devices 768px and below -->
+    <div class="ux-cs-full-image--mobile">
+      <img src="images/TuneIn_LinkedInArticle_mobile.png" alt="LinkedIn Article Mobile" loading="lazy">
+    </div>
+  </div>
+
+  <section class="ux-cs-section ux-cs-section-end--white">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <h3 class="ux-cs-h3-subsection">An hypothesis that had never been challenged</h3>
+      <p class="ux-cs-section-body">My colleague <a href="https://www.linkedin.com/in/james-heffernan/" target="_blank">James Heffernan</a> recently posted an <a href="https://www.linkedin.com/pulse/untangling-strategy-design-planning-bets-between-james-heffernan-vjr1f/" target="_blank">article on the relationship between strategy, planning and strategic design</a>. This observation of his stood out to me: <i><b>“strategy is fundamentally a hypothesis – it is a belief that if we do X, then Y will follow because certain conditions are assumed to be true.”</b></i></p>
+      <p class="ux-cs-section-body">Almost every decision I fed into Lovable to build this prototype was built on assumptions that I never properly interrogated:</p>
+  
+      <!-- Numbered List - New Styled Format -->
+        <div class="ux-cs-numbered-list-container">
+          <div class="ux-cs-numbered-list-item--blue reveal">
+            <span class="ux-cs-list-number">A.</span>
+            <p class="ux-cs-list-text">I assumed a 30 second clip via iTunes is more preferable to being able to hear the full song via Spotify.</p>
+          </div>
+          <div class="ux-cs-numbered-list-item--blue reveal">
+            <span class="ux-cs-list-number">B.</span>
+            <p class="ux-cs-list-text">I assumed that guessing the release year is an equal and enjoyable part of the fun (turns out it's actually quite frustrating).</p>
+          </div>
+          <div class="ux-cs-numbered-list-item--blue reveal">
+            <span class="ux-cs-list-number">C.</span>
+            <p class="ux-cs-list-text">I assumed competitive scoring was the primary source of motivation. (It is for me! 😂)</p>
+          </div>
+          <div class="ux-cs-numbered-list-item--blue reveal">
+            <span class="ux-cs-list-number">D.</span>
+            <p class="ux-cs-list-text">I assumed the mechanics of the physical card game would naturally translate into a successful digital experience.</p>
+          </div>
+        </div>
+
+      <p class="ux-cs-section-body">The prototype itself became a plan executed against a hypothesis that had never been challenged. That doesn't mean the exercise lacked value. The speed of the development with AI allowed my assumptions to become visible far more quickly than would previously have been possible for me. But visibility is not validation.</p>
+      <p class="ux-cs-section-body">If anything, this experience reinforced for me the role of UX, research and strategic design. As the cost of creating solutions continues to fall, the value of identifying the right problem, questioning assumptions and validating strategic bets only increases.</p>
+      <p class="ux-cs-section-body">Building has become easier than ever, but understanding is still the hard part and far more important than ever in this new AI enabled world.</p>
+      <br>
+      <hr>
+      <br>
+      <p class="ux-cs-section-body" style="font-weight: 600;">Thanks for reading. You can try out the Tune.In! game that I built at this link, let me know you think! <a href="https://tunein.brian-design.net/" target="_blank">https://tunein.brian-design.net/</a></p>
+
+    </div>
+  </section>
+
+
+  <section class="ux-cs-section ux-cs-section-intro--white">
+    <div class="container" style="max-width: 920px; width: 95%; margin: 0 auto; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+    </div>
+  </section>
+
+
+ <!-- ### View All Projects Navigation ### -->
+  
+  <section class="project-nav" data-prev-url="valid8me-ux.html" data-next-url="design-operations-ux.html">
+    <a href="valid8me-ux.html" class="nav-arrow arrow-left" aria-label="Previous project">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="63" y1="8" x2="1" y2="8"/>
+        <polyline points="10,1 1,8 10,15"/>
+      </svg>
+    </a>
+    <a href="index.html" class="project-nav-text">View All Projects</a>
+    <a href="design-operations-ux.html" class="nav-arrow arrow-right" aria-label="Next project">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="16" viewBox="0 0 64 16" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="1" y1="8" x2="63" y2="8"/>
+        <polyline points="54,1 63,8 54,15"/>
+      </svg>
+    </a>
+  </section>
+
+</main>
+
+
+<!-- ################################################# -->
+<!-- LIGHTBOX -->
+<!-- ################################################# -->
+
+<div class="lightbox">
+  <button class="lightbox-fullscreen" aria-label="Toggle fullscreen">
+    <i class="fas fa-expand"></i>
+  </button>
+  <button class="lightbox-close" aria-label="Close lightbox">
+    <i class="fas fa-times"></i>
+  </button>
+  <button class="lightbox-prev" aria-label="Previous media">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <button class="lightbox-next" aria-label="Next media">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+  <div class="lightbox-content">
+    <div class="lightbox-media">
+      <!-- Media content will be inserted here by JavaScript -->
+    </div>
+  </div>
+</div>
+
+
+<!-- ################################################# -->
+<!-- SITE FOOTER  -->
+<!-- ################################################# -->
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+    <!-- Level 1 Text -->
+    <h3 class="footer-fade">Feel free to connect with me on <b><a href="https://www.linkedin.com/in/brianmccartan/" target="_blank" rel="noopener">LinkedIn</a></b>!</h3>
+    <!-- Contact Details -->
+    <p class="footer-contact">
+     <a href="mailto:br.mccartan@gmail.com" class="icon-link">
+       <i class="fa-solid fa-envelope"></i>
+       <span class="link-text">br.mccartan@gmail.com</span>
+     </a>
+     <a href="tel:+353863039799" class="icon-link">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span class="link-text">+353 86 3039799</span>
+     </a>
+    </p>
+    <!-- Copyright Line -->
+    <h6>© <span id="copyright-year"></span> Designed and built by Brian McCartan</h6>
+  </div>
+</footer>
+
+
+<!-- ################################################# -->
+<!-- SCROLL TO TOP BUTTON ON MOBILE  -->
+<!-- ################################################# -->
+
+<button id="scrollToTop" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<!-- ################################################# -->
+<!-- BOTTOM NAVIGATION MENU ON MOBILE  -->
+<!-- ################################################# -->
+
+<nav class="bottom-nav">
+  <a href="tel:+353863039799" class="nav-item" aria-label="Call Brian">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+  <a href="mailto:br.mccartan@gmail.com" class="nav-item" aria-label="Email Brian">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/brianmccartan/" class="nav-item linkedin" aria-label="LinkedIn profile">
+  <i class="fa-brands fa-linkedin-in"></i>
+</a>
+</nav>
+
+
+<!-- ################################################# -->
+<!-- END OF DOCUMENT  -->
+<!-- ################################################# -->
+
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/case-study.js"></script>
+
+</body>
+</html>
