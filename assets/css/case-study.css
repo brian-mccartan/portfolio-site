@@ -1093,6 +1093,19 @@
   margin-bottom: 0;
 }
 
+/* UX Case Study: Section Pullout Quote */
+.ux-cs-section-pullout-quote {
+  font-weight: 500;
+  font-size: 26px;
+  letter-spacing: 0em;
+  color: var(--standard-text-color);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  line-height: 1.75;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 /* UX Case Study: Section Image Title */
 .ux-cs-section-image-title {
   text-align: center;
@@ -1622,6 +1635,10 @@
 
   .ux-cs-section-body {
     line-height: 1.55em;
+  }
+
+  .ux-cs-section-pullout-quote {
+    font-size: 22px;
   }
 
   .ux-cs-section-intro--blue,
